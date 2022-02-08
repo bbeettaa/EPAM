@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/Output_Result.csv" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/resources/Output_Result.csv" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/resources/Output_Result_From_URL.csv" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/resources/Output_Result_url.csv" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/resources/csv/Output_Result.csv" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/resources/csv/zp-lupen-2019.csv" charset="windows-1251" />
+  </component>
+</project>

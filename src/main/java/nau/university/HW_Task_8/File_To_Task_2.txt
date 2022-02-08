@@ -1,0 +1,4 @@
+Find the three longest words in the input file and print them out in the format: word ==> the quantity of the letters 
+in the word. The list should be sorted in descending order of the letter's quantity in the word.
+If two words have the same quantity of the letters, then the word that occurred in the source file earlier should 
+also be earlier in the resulting list.
