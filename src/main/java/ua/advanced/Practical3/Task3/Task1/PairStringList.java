@@ -2,7 +2,6 @@ package ua.advanced.Practical3.Task3.Task1;
 
 import java.util.*;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class PairStringList implements List<String> {
     private Node first;
@@ -31,11 +30,11 @@ public class PairStringList implements List<String> {
     @Override
     public void add(int index, String element) {
         //if (indexOf(element) == -1) return;
-        if(index>=size()/2);
+        if(index>=size()/2) return;
 
         int indexEl = 0;
         Node cur = first;
-        Node next = first;
+        Node next;
         while ((indexEl++) != index-1)
             cur = cur.next.next;
 
@@ -105,7 +104,7 @@ String data = get(index);
 
     @Override
     public Iterator<String> iterator() {
-        return new Iterator<String>() {
+        return new Iterator<>() {
             Node current = first;
 
             @Override
@@ -124,7 +123,7 @@ String data = get(index);
             @Override
             public void remove() {
                 Node previous = first;
-                while (previous.next.data != current.data)
+                while (!previous.next.data.equals(current.data))
                     previous = previous.next;
 
                 previous.next = current.next;

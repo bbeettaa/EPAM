@@ -1,14 +1,12 @@
 package ua.advanced.Practical3.Task3.Task2;
 
-import java.util.ArrayDeque;
 import java.util.Arrays;
-import java.util.PriorityQueue;
-import java.util.Queue;
+
 
 public class Main {
     public static void main(String[] args) {
         MedianQueue mq = new MedianQueue();
-        mq.clear();
+
         mq.addAll(Arrays.stream(new Integer[]{100,10,1}).toList());
         System.out.printf("%s -> %d\n",mq,mq.element());//[1, 10, 100] -> 10
         mq.clear();
