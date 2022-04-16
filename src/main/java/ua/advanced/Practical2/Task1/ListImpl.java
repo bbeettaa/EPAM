@@ -3,7 +3,7 @@ package ua.advanced.Practical2.Task1;
 import java.util.Iterator;
 
 public class ListImpl implements List {
-    private IteratorImpl iterator;
+    private final IteratorImpl iterator;
     private Node first;
 
     public ListImpl() {
@@ -83,7 +83,6 @@ public class ListImpl implements List {
     @Override
     public void addFirst(Object element) {
         Node node = new Node(element);
-
         node.next = first;
         first = node;
     }
