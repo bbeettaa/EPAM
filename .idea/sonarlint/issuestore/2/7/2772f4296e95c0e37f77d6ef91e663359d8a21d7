@@ -1,0 +1,27 @@
+
+J
+java:S3740	"/Provide the parametrized type for this generic.(¢ô²şÿÿÿÿ
+E
+java:S3740R"/Provide the parametrized type for this generic.(¾’ı
+N	java:S106"9Replace this use of System.out or System.err by a logger.(«’ÌÖ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(¨³Ë
+N	java:S106"9Replace this use of System.out or System.err by a logger.(«’ÌÖ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(¨³Ë
+N	java:S106""9Replace this use of System.out or System.err by a logger.(«’ÌÖ
+H
+java:S1172'"2Remove this unused method parameter "singleValue".(•¨¶
+H
+java:S1172+"2Remove this unused method parameter "singleValue".(ùƒ‡
+P	java:S125:"<This block of commented-out lines of code should be removed.(í‰2
+1
+java:S2326e"I is not used in the class.(°ÈÕ¡
+d
+java:S2272r"NAdd a "NoSuchElementException" for iteration beyond the end of the collection.(şÿøë
+X
+java:S1854‡"<Remove this useless assignment to local variable "previous".(ûÎéıÿÿÿÿ
+W	java:S125”"<This block of commented-out lines of code should be removed.(ª¸ê”üÿÿÿÿ
+X
+java:S1128"BRemove this unused import 'ua.advanced.Practical2.Task1.ListImpl'.(ÍšŸœ
+p
+java:S2293ˆ"YReplace the type specification in this constructor call with the diamond operator ("<>").(ë×Ó
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ÈÍæ´

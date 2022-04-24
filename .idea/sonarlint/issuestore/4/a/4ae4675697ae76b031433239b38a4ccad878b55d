@@ -1,0 +1,16 @@
+
+J
+java:S3740"/Provide the parametrized type for this generic.(“òÁ‹ýÿÿÿÿ
+J
+java:S3740"/Provide the parametrized type for this generic.(Á»Îèÿÿÿÿÿ
+A
+java:S2160"+Override the "equals" method in this class.(é´‘ü
+P
+java:S1161":Add the "@Override" annotation above this method signature(µŽì£
+i
+java:S2272"NAdd a "NoSuchElementException" for iteration beyond the end of the collection.(«ÞÄ•ùÿÿÿÿ
+P
+java:S1161G":Add the "@Override" annotation above this method signature(¬…éî
+I
+java:S1121,".Extract the assignment out of this expression.(±ÚÛÑøÿÿÿÿ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ƒµ˜†

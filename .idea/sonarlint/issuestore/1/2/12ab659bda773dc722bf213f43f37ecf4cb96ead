@@ -1,0 +1,11 @@
+
+<
+java:S1168"&Return an empty array instead of null.(¥¹ï
+Q	java:S125T"<This block of commented-out lines of code should be removed.(Ù‘ÿø
+d
+java:S2272c"NAdd a "NoSuchElementException" for iteration beyond the end of the collection.(þÿøë
+S
+java:S1128"8Remove this unused import 'java.util.stream.Collectors'.(Óóº´úÿÿÿÿ
+W
+java:S4973m"<Strings and Boxed types should be compared using "equals()".(–—û¸úÿÿÿÿ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ŠÇ±á

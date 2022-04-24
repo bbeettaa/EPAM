@@ -1,0 +1,26 @@
+
+g
+java:S3457"Q%n should be used in place of \n to produce the platform-specific line separator.(†è¾Ð
+N	java:S106"9Replace this use of System.out or System.err by a logger.(†è¾Ð
+f
+java:S3457"Q%n should be used in place of \n to produce the platform-specific line separator.(½™Ï$
+M	java:S106"9Replace this use of System.out or System.err by a logger.(½™Ï$
+l
+java:S3457"Q%n should be used in place of \n to produce the platform-specific line separator.(£Ž‹Óýÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(£Ž‹Óýÿÿÿÿ
+l
+java:S3457"Q%n should be used in place of \n to produce the platform-specific line separator.(Þñéùÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(Þñéùÿÿÿÿ
+g
+java:S3457"Q%n should be used in place of \n to produce the platform-specific line separator.(Åá”Û
+N	java:S106"9Replace this use of System.out or System.err by a logger.(Åá”Û
+g
+java:S3457"Q%n should be used in place of \n to produce the platform-specific line separator.( ”Ûž
+N	java:S106"9Replace this use of System.out or System.err by a logger.( ”Ûž
+l
+java:S3457"Q%n should be used in place of \n to produce the platform-specific line separator.(«”ê„øÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(«”ê„øÿÿÿÿ
+`
+java:S1192"JDefine a constant instead of duplicating this literal "%s -> %d
+" 7 times.(†è¾Ð
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ŠÇ±á

@@ -1,0 +1,14 @@
+
+F
+java:S3740 "/Provide the parametrized type for this generic.(âÞ´ç
+n
+java:S6204‹"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(éøÞ£ùÿÿÿÿ
+R	java:S125¥"<This block of commented-out lines of code should be removed.(Û‹æá
+R	java:S125Á"<This block of commented-out lines of code should be removed.(Ù‘ÿø
+=
+java:S1168Ç"&Return an empty array instead of null.(¥¹ï
+B
+java:S1168ê"+Return an empty collection instead of null.(¥¹ï
+K
+java:S1066ª"/Merge this if statement with the enclosing one.(Øµêìùÿÿÿÿ
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¸Ï÷·ùÿÿÿÿ

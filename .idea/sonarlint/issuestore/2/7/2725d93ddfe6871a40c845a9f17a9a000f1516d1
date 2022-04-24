@@ -1,0 +1,40 @@
+
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ã¿¢Ôùÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(†ÑÄİ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(¥ĞŸáùÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ã¿¢Ôùÿÿÿÿ
+N	java:S106 "9Replace this use of System.out or System.err by a logger.(œ¯ö¬
+g
+java:S3457""Q%n should be used in place of \n to produce the platform-specific line separator.(µŒ½
+N	java:S106""9Replace this use of System.out or System.err by a logger.(µŒ½
+l
+java:S3457$"Q%n should be used in place of \n to produce the platform-specific line separator.(œ‚òÂûÿÿÿÿ
+S	java:S106$"9Replace this use of System.out or System.err by a logger.(œ‚òÂûÿÿÿÿ
+S	java:S106%"9Replace this use of System.out or System.err by a logger.(ã¿¢Ôùÿÿÿÿ
+l
+java:S3457&"Q%n should be used in place of \n to produce the platform-specific line separator.(´÷Ú ıÿÿÿÿ
+S	java:S106&"9Replace this use of System.out or System.err by a logger.(´÷Ú ıÿÿÿÿ
+g
+java:S3457'"Q%n should be used in place of \n to produce the platform-specific line separator.(½Ôœ¡
+N	java:S106'"9Replace this use of System.out or System.err by a logger.(½Ôœ¡
+S	java:S106)"9Replace this use of System.out or System.err by a logger.(Í¬Çªùÿÿÿÿ
+S	java:S106,"9Replace this use of System.out or System.err by a logger.(üŠ¨÷şÿÿÿÿ
+g
+java:S34572"Q%n should be used in place of \n to produce the platform-specific line separator.(µüò
+N	java:S1062"9Replace this use of System.out or System.err by a logger.(µüò
+g
+java:S34573"Q%n should be used in place of \n to produce the platform-specific line separator.(ÓÒ¾È
+;
+java:S34573"%String contains no format specifiers.(ÓÒ¾È
+N	java:S1063"9Replace this use of System.out or System.err by a logger.(ÓÒ¾È
+S	java:S1068"9Replace this use of System.out or System.err by a logger.(üŠ¨÷şÿÿÿÿ
+j
+java:S2272¿"NAdd a "NoSuchElementException" for iteration beyond the end of the collection.(Ğş÷¿ûÿÿÿÿ
+X
+java:S1854Ñ"<Remove this useless assignment to local variable "previous".(ûÎéıÿÿÿÿ
+W	java:S125Ş"<This block of commented-out lines of code should be removed.(ª¸ê”üÿÿÿÿ
+J
+java:S1121À".Extract the assignment out of this expression.(Š“èÍùÿÿÿÿ
+r
+java:S1488"]Immediately return this expression instead of assigning it to the temporary variable "value".(¤“ë+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Î«ÖŒøÿÿÿÿ

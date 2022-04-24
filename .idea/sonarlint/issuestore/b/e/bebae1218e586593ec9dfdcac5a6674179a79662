@@ -1,0 +1,12 @@
+
+N
+java:S1854
+"8Remove this useless assignment to local variable "spam".(Ô„áè
+?
+java:S1481
+")Remove this unused "spam" local variable.(Ô„áè
+t
+java:S2142 "^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€
+R
+java:S1128"0Remove this unused import 'java.io.IOException'.(ªº»Úýÿÿÿÿ8¸ÎóŒƒ0
+n	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¨Ù÷@
