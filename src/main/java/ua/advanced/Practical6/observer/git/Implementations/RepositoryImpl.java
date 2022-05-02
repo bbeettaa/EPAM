@@ -1,7 +1,7 @@
-package ua.advanced.Practical6.observer.git.Interfaces;
+package ua.advanced.Practical6.observer.git.Implementations;
 
-import ua.advanced.Practical6.observer.git.Implementations.Commit;
-import ua.advanced.Practical6.observer.git.Implementations.Event;
+import ua.advanced.Practical6.observer.git.Interfaces.Repository;
+import ua.advanced.Practical6.observer.git.Interfaces.WebHook;
 
 import java.util.ArrayList;
 import java.util.List;
