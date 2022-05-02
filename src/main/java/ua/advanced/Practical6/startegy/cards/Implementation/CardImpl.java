@@ -1,6 +1,6 @@
 package ua.advanced.Practical6.startegy.cards.Implementation;
 
-import ua.advanced.Practical6.startegy.cards.Card;
+import ua.advanced.Practical6.startegy.cards.Interfaces.Card;
 
 class CardImpl implements Card {
 

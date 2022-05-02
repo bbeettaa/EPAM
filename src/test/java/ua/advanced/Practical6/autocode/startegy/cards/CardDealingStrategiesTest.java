@@ -1,15 +1,11 @@
 package ua.advanced.Practical6.autocode.startegy.cards;
 
 import org.junit.Test;
-import ua.advanced.Practical6.startegy.cards.Card;
 import ua.advanced.Practical6.startegy.cards.CardDealingStrategies;
-import ua.advanced.Practical6.startegy.cards.CardDealingStrategy;
-import ua.advanced.Practical6.startegy.cards.Deck;
+import ua.advanced.Practical6.startegy.cards.Interfaces.CardDealingStrategy;
+import ua.advanced.Practical6.startegy.cards.Interfaces.Deck;
 import ua.advanced.Practical6.startegy.cards.Implementation.DeckImpl;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.TreeMap;
 
 import static org.junit.Assert.assertEquals;

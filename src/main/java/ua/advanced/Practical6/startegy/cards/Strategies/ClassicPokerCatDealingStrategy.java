@@ -1,8 +1,8 @@
 package ua.advanced.Practical6.startegy.cards.Strategies;
 
-import ua.advanced.Practical6.startegy.cards.Card;
-import ua.advanced.Practical6.startegy.cards.CardDealingStrategy;
-import ua.advanced.Practical6.startegy.cards.Deck;
+import ua.advanced.Practical6.startegy.cards.Interfaces.Card;
+import ua.advanced.Practical6.startegy.cards.Interfaces.CardDealingStrategy;
+import ua.advanced.Practical6.startegy.cards.Interfaces.Deck;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package ua.advanced.Practical6.startegy.cards;
+package ua.advanced.Practical6.startegy.cards.Interfaces;
 
 import java.util.List;
 import java.util.Map;

@@ -1,5 +1,6 @@
 package ua.advanced.Practical6.startegy.cards;
 
+import ua.advanced.Practical6.startegy.cards.Interfaces.CardDealingStrategy;
 import ua.advanced.Practical6.startegy.cards.Strategies.BridgeCartDealingStrategy;
 import ua.advanced.Practical6.startegy.cards.Strategies.ClassicPokerCatDealingStrategy;
 import ua.advanced.Practical6.startegy.cards.Strategies.FoolCardDealingStrategy;
