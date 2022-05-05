@@ -1,0 +1,7 @@
+
+O
+java:S1118":Add a private constructor to hide the implicit public one.(ïÉÙ
+B
+java:S3011",This accessibility update should be removed.(˜ÂÓ˜
+V	java:S125"<This block of commented-out lines of code should be removed.(¨Øº¯şÿÿÿÿ
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(·‰âƒ

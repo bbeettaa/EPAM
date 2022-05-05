@@ -1,0 +1,92 @@
+мая 02, 2022 10:58:40 AM TexasHoldemCartStrategy dealStacks
+WARNING: Cannot validate strategy because value is out of range. Field: players
+StrategyValidator.isRangeFieldObject(StrategyValidator.java:18)
+мая 02, 2022 10:58:40 AM ClassicPokerCatDealingStrategy <init>
+INFO: BridgeCartDealingStrategy created
+мая 02, 2022 10:58:40 AM ClassicPokerCatDealingStrategy dealStacks
+WARNING: Cannot validate strategy because value is out of range. Field: players
+StrategyValidator.isRangeFieldObject(StrategyValidator.java:18)
+мая 02, 2022 10:58:40 AM TexasHoldemCartStrategy dealStacks
+WARNING: Cannot validate strategy because value is out of range. Field: players
+StrategyValidator.isRangeFieldObject(StrategyValidator.java:18)
+мая 02, 2022 10:58:40 AM ClassicPokerCatDealingStrategy <init>
+INFO: BridgeCartDealingStrategy created
+мая 02, 2022 10:58:40 AM ClassicPokerCatDealingStrategy dealStacks
+WARNING: Cannot validate strategy because value is out of range. Field: players
+StrategyValidator.isRangeFieldObject(StrategyValidator.java:18)
+мая 02, 2022 10:58:40 AM TexasHoldemCartStrategy dealStacks
+INFO: TexasHoldemCartStrategy: start dealing, deck size: 52
+мая 02, 2022 10:58:40 AM TexasHoldemCartStrategy dealCardToPlayers
+INFO: TexasHoldemCartStrategy: dealing card [51, 48] to Player  1
+мая 02, 2022 10:58:40 AM TexasHoldemCartStrategy dealCardToPlayers
+INFO: TexasHoldemCartStrategy: dealing card [50, 47] to Player  2
+мая 02, 2022 10:58:40 AM TexasHoldemCartStrategy dealCardToCommunity
+INFO: TexasHoldemCartStrategy: dealing card [45, 44, 43, 42, 41] to Community
+мая 02, 2022 10:58:40 AM TexasHoldemCartStrategy dealCardToRemaining
+INFO: TexasHoldemCartStrategy: dealing card [40, 39, 38, 37, 36, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0] to Remaining
+мая 02, 2022 10:58:40 AM TexasHoldemCartStrategy dealStacks
+INFO: TexasHoldemCartStrategy: end dealing
+
+мая 02, 2022 10:58:40 AM BridgeCartDealingStrategy <init>
+INFO: BridgeCartDealingStrategy created
+мая 02, 2022 10:58:40 AM BridgeCartDealingStrategy dealStacks
+WARNING: Cannot validate strategy because value is out of range. Field: players
+StrategyValidator.isRangeFieldObject(StrategyValidator.java:18)
+мая 02, 2022 10:58:40 AM FoolCardDealingStrategy dealStacks
+WARNING: Cannot validate strategy because value is out of range. Field: players
+StrategyValidator.isRangeFieldObject(StrategyValidator.java:18)
+мая 02, 2022 10:58:40 AM FoolCardDealingStrategy dealStacks
+INFO: FoolCardDealingStrategy: start dealing, deck size: 36
+мая 02, 2022 10:58:40 AM FoolCardDealingStrategy dealCardToPlayers
+INFO: FoolCardDealingStrategy: dealing card [35, 30, 25, 20, 15, 10] to Player  1
+мая 02, 2022 10:58:40 AM FoolCardDealingStrategy dealCardToPlayers
+INFO: FoolCardDealingStrategy: dealing card [34, 29, 24, 19, 14, 9] to Player  2
+мая 02, 2022 10:58:40 AM FoolCardDealingStrategy dealCardToPlayers
+INFO: FoolCardDealingStrategy: dealing card [33, 28, 23, 18, 13, 8] to Player  3
+мая 02, 2022 10:58:40 AM FoolCardDealingStrategy dealCardToPlayers
+INFO: FoolCardDealingStrategy: dealing card [32, 27, 22, 17, 12, 7] to Player  4
+мая 02, 2022 10:58:40 AM FoolCardDealingStrategy dealCardToTrump
+INFO: FoolCardDealingStrategy: dealing card [5] to Trump card
+мая 02, 2022 10:58:40 AM FoolCardDealingStrategy dealCardToRemaining
+INFO: FoolCardDealingStrategy: dealing card [4, 3, 2, 1, 0] to Remaining
+мая 02, 2022 10:58:40 AM FoolCardDealingStrategy dealStacks
+INFO: FoolCardDealingStrategy: end dealing
+
+мая 02, 2022 10:58:40 AM ClassicPokerCatDealingStrategy <init>
+INFO: BridgeCartDealingStrategy created
+мая 02, 2022 10:58:40 AM ClassicPokerCatDealingStrategy dealStacks
+INFO: ClassicPokerCatDealingStrategy: start dealing, deck size: 36
+мая 02, 2022 10:58:40 AM ClassicPokerCatDealingStrategy dealCardToPlayers
+INFO: ClassicPokerCatDealingStrategy: dealing card [35, 30, 25, 20, 15] to Player  1
+мая 02, 2022 10:58:40 AM ClassicPokerCatDealingStrategy dealCardToPlayers
+INFO: ClassicPokerCatDealingStrategy: dealing card [34, 29, 24, 19, 14] to Player  2
+мая 02, 2022 10:58:40 AM ClassicPokerCatDealingStrategy dealCardToPlayers
+INFO: ClassicPokerCatDealingStrategy: dealing card [33, 28, 23, 18, 13] to Player  3
+мая 02, 2022 10:58:40 AM ClassicPokerCatDealingStrategy dealCardToPlayers
+INFO: ClassicPokerCatDealingStrategy: dealing card [32, 27, 22, 17, 12] to Player  4
+мая 02, 2022 10:58:40 AM ClassicPokerCatDealingStrategy dealCardToRemaining
+INFO: ClassicPokerCatDealingStrategy: dealing card [10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0] to Remaining
+мая 02, 2022 10:58:40 AM ClassicPokerCatDealingStrategy dealStacks
+INFO: ClassicPokerCatDealingStrategy: end dealing
+
+мая 02, 2022 10:58:40 AM FoolCardDealingStrategy dealStacks
+WARNING: Cannot validate strategy because value is out of range. Field: players
+StrategyValidator.isRangeFieldObject(StrategyValidator.java:18)
+мая 02, 2022 10:58:40 AM BridgeCartDealingStrategy <init>
+INFO: BridgeCartDealingStrategy created
+мая 02, 2022 10:58:40 AM BridgeCartDealingStrategy dealStacks
+INFO: BridgeCartDealingStrategy: start dealing, deck size: 52
+мая 02, 2022 10:58:40 AM BridgeCartDealingStrategy dealCardToPlayers
+INFO: BridgeCartDealingStrategy: dealing card [51, 47, 43, 39, 35, 31, 27, 23, 19, 15, 11, 7, 3] to Player  1
+мая 02, 2022 10:58:40 AM BridgeCartDealingStrategy dealCardToPlayers
+INFO: BridgeCartDealingStrategy: dealing card [50, 46, 42, 38, 34, 30, 26, 22, 18, 14, 10, 6, 2] to Player  2
+мая 02, 2022 10:58:40 AM BridgeCartDealingStrategy dealCardToPlayers
+INFO: BridgeCartDealingStrategy: dealing card [49, 45, 41, 37, 33, 29, 25, 21, 17, 13, 9, 5, 1] to Player  3
+мая 02, 2022 10:58:40 AM BridgeCartDealingStrategy dealStacks
+INFO: BridgeCartDealingStrategy: end dealing
+
+мая 02, 2022 10:58:40 AM BridgeCartDealingStrategy <init>
+INFO: BridgeCartDealingStrategy created
+мая 02, 2022 10:58:40 AM BridgeCartDealingStrategy dealStacks
+WARNING: Cannot validate strategy because value is out of range. Field: players
+StrategyValidator.isRangeFieldObject(StrategyValidator.java:18)

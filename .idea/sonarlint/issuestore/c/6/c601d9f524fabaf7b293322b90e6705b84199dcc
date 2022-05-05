@@ -1,0 +1,8 @@
+
+c
+java:S1126;"AReplace this if-then-else statement by a single return statement.(©‹ÌÚýÿÿÿÿ8‡‰Ê€‡0
+k
+java:S2272A"NAdd a "NoSuchElementException" for iteration beyond the end of the collection.(žÓÔç8ÇÄË€‡0
+v
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(‰ðŠ˜8ÈÄË€‡0
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(±õ«¼øÿÿÿÿ

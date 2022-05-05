@@ -1,10 +1,10 @@
 package ua.advanced.practical7.strategy.cards;
 
 import org.junit.Test;
-import ua.advanced.Practical7.strategy.cards.CardDealingStrategies;
-import ua.advanced.Practical7.strategy.cards.implementation.DeckImpl;
-import ua.advanced.Practical7.strategy.cards.interfaces.CardDealingStrategy;
-import ua.advanced.Practical7.strategy.cards.interfaces.Deck;
+import ua.advanced.Practical6_enhanced.strategy.cards.CardDealingStrategies;
+import ua.advanced.Practical6_enhanced.strategy.cards.implementation.DeckImpl;
+import ua.advanced.Practical6_enhanced.strategy.cards.interfaces.CardDealingStrategy;
+import ua.advanced.Practical6_enhanced.strategy.cards.interfaces.Deck;
 
 import java.util.TreeMap;
 

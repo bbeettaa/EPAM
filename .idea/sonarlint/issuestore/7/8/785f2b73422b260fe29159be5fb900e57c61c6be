@@ -1,0 +1,6 @@
+
+V
+java:S1117,";Rename "commits" which hides the field declared at line 12.(é”‚¸úÿÿÿÿ
+R
+java:S49737"<Strings and Boxed types should be compared using "equals()".(”þõ¿
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(°äŒãþÿÿÿÿ
