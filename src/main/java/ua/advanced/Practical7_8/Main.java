@@ -1,32 +1,26 @@
 package ua.advanced.Practical7_8;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
+import ua.advanced.Practical7_8.DAO.SomeService;
+
+import java.io.File;
 import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ResourceBundle;
 
 public class Main {
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
-        Connection cn = ConnectionCreator.createConnection();
-        Statement st = cn.createStatement();
+        SomeService someService = new SomeService();
 
-    }
-}
+        //File file = new File();
 
-class ConnectionCreator {
-    private static final String DATABASE_URL;
-    private static final String DATABASE_USER;
-    private static final String DATABASE_PASS;
-
-    static {
-        ResourceBundle rb = ResourceBundle.getBundle("database");
-        DATABASE_URL = rb.getString("db.url");
-        DATABASE_USER = rb.getString("db.user");
-        DATABASE_PASS = rb.getString("db.password");
-    }
-
-    public static Connection createConnection() throws SQLException {
-        return DriverManager.getConnection(DATABASE_URL,DATABASE_USER,DATABASE_PASS );
+        someService.findAllFilms().forEach(System.out::println);
+        System.out.println();
+        someService.findAllFilmsInCurrentAndPreviousYear(2008).forEach(System.out::println);
+        System.out.println();
+        someService.findActorsStarredInAtLeastFilms(2).forEach(System.out::println);
+        System.out.println();
+        someService.findActorThatIsDirector().forEach(System.out::println);
+        System.out.println();
+        someService.deleteFilmsFromPreviousYears(2008);
+        System.out.println();
+        someService.findAllFilms().forEach(System.out::println);
     }
 }
