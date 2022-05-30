@@ -1,0 +1,14 @@
+
+^
+java:S2095"HUse try-with-resources or close this "Connection" in a "finally" clause.(¥ˆ€¹
+n
+java:S1450"XRemove the "statement" field and declare it as a local variable in the relevant methods.(”Þ‹Á
+F
+java:S1068"+Remove this unused "connect" private field.(’µ¦„ûÿÿÿÿ
+C
+java:S1068"-Remove this unused "statement" private field.(”Þ‹Á
+P
+java:S1068	"5Remove this unused "preparedStatement" private field.(çƒ„Žøÿÿÿÿ
+C
+java:S1068
+"-Remove this unused "resultSet" private field.(Þþö€

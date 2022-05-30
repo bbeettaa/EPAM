@@ -1,0 +1,19 @@
+
+V
+&src/main/java/ua/epam/models/Role.java,5\0\5073a364b821283e4f5d3353895efd98e3b95d68
+a
+1src/main/java/ua/epam/models/entities/Entity.java,a\f\afd75cda51e8248d33ea1c58bd08ee55475f6099
+s
+Csrc/main/java/ua/epam/controller/commands/common/LogoutCommand.java,0\b\0b442dcee5980e8a6181315c7b62d2b6946a2142
+O
+src/main/java/ua/epam/Main.java,2\0\20ab23c9b9d1c228258ca7508ed12cf03f709772
+R
+"src/main/java/ua/epam/MainLog.java,6\a\6a3daf65701c5edff9c8a21f1db8dd8d79bf285d
+p
+@src/main/java/ua/epam/controller/controller/ContextListener.java,4\e\4e89c7125280b2ddb19bb39bdf97331d463f7685
+S
+#src/main/webapp/WEB-INF/_script.jsp,a\0\a09e4eec85ed9ba2a5006fecf74423469eb4d9ce
+f
+6src/main/java/ua/epam/dao/utils/EntityTransaction.java,8\c\8c3b85eb26ac0fb0a4e812a776d2bcd1af07d34f
+G
+webapp/target/myapp.log,6\d\6d7488e9e86a436da8663ae6366bb287f3e502a9
