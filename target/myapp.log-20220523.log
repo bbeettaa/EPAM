@@ -1,0 +1,124 @@
+2022-05-23 14:58:49,999 [main] INFO  (ContextListener.java:26) - Context listener start working
+  2022-05-23 15:00:39,339 [main] INFO  (ContextListener.java:26) - Context listener start working
+  2022-05-23 15:00:40,845 [http-nio-8080-exec-2] INFO  (ConnectionCreator.java:33) - mysql connection - established
+  2022-05-23 15:00:41,163 [http-nio-8080-exec-2] INFO  (ConnectionCreator.java:33) - mysql connection - established
+  2022-05-23 15:00:46,705 [http-nio-8080-exec-3] INFO  (ConnectionCreator.java:33) - mysql connection - established
+  2022-05-23 15:00:46,719 [http-nio-8080-exec-3] INFO  (ConnectionCreator.java:33) - mysql connection - established
+  2022-05-23 15:00:46,733 [http-nio-8080-exec-3] INFO  (ConnectionCreator.java:33) - mysql connection - established
+  2022-05-23 15:00:46,745 [http-nio-8080-exec-3] INFO  (ConnectionCreator.java:33) - mysql connection - established
+  2022-05-23 15:00:46,764 [http-nio-8080-exec-3] INFO  (ConnectionCreator.java:33) - mysql connection - established
+  2022-05-23 15:00:46,775 [http-nio-8080-exec-3] INFO  (ConnectionCreator.java:33) - mysql connection - established
+  2022-05-23 15:01:21,940 [main] INFO  (ContextListener.java:26) - Context listener start working
+  2022-05-23 15:01:27,965 [http-nio-8080-exec-2] INFO  (ConnectionCreator.java:33) - mysql connection - established
+  2022-05-23 15:01:32,435 [http-nio-8080-exec-2] INFO  (ConnectionCreator.java:33) - mysql connection - established
+  2022-05-23 15:01:42,879 [main] INFO  (ContextListener.java:26) - Context listener start working
+  2022-05-23 15:01:47,637 [http-nio-8080-exec-1] INFO  (ConnectionCreator.java:33) - mysql connection - established
+  2022-05-23 15:01:48,395 [http-nio-8080-exec-1] INFO  (ConnectionCreator.java:33) - mysql connection - established
+  2022-05-23 15:02:00,284 [http-nio-8080-exec-3] INFO  (ConnectionCreator.java:33) - mysql connection - established
+  2022-05-23 15:02:00,681 [http-nio-8080-exec-3] INFO  (ConnectionCreator.java:33) - mysql connection - established
+  2022-05-23 15:02:01,041 [http-nio-8080-exec-3] INFO  (ConnectionCreator.java:33) - mysql connection - established
+  2022-05-23 15:02:01,407 [http-nio-8080-exec-3] INFO  (ConnectionCreator.java:33) - mysql connection - established
+  2022-05-23 15:02:40,892 [main] INFO  (ContextListener.java:26) - Context listener start working
+  2022-05-23 15:02:56,265 [http-nio-8080-exec-2] ERROR (UserDao.java:93) - Parameter index out of range (1 > number of parameters, which is 0).
+  2022-05-23 15:04:01,586 [main] INFO  (ContextListener.java:26) - Context listener start working
+  2022-05-23 15:05:12,853 [main] INFO  (ContextListener.java:26) - Context listener start working
+  2022-05-23 15:06:42,952 [main] INFO  (ContextListener.java:26) - Context listener start working
+  2022-05-23 15:07:09,498 [http-nio-8080-exec-4] ERROR (UserDao.java:93) - Parameter index out of range (1 > number of parameters, which is 0).
+  2022-05-23 15:07:17,384 [main] INFO  (ContextListener.java:26) - Context listener start working
+  2022-05-23 15:08:25,793 [main] INFO  (ContextListener.java:26) - Context listener start working
+  2022-05-23 15:30:19,039 [main] INFO  (ContextListener.java:26) - Context listener start working
+  2022-05-23 15:30:43,897 [http-nio-8080-exec-5] ERROR (UserDao.java:93) - Parameter index out of range (2 > number of parameters, which is 0).
+  2022-05-23 15:32:20,489 [main] INFO  (ContextListener.java:26) - Context listener start working
+  2022-05-23 15:33:35,826 [main] INFO  (ContextListener.java:26) - Context listener start working
+  2022-05-23 15:33:41,647 [main] INFO  (ContextListener.java:26) - Context listener start working
+  2022-05-23 15:34:11,368 [http-nio-8080-exec-4] ERROR (UserDao.java:93) - Statement.executeQuery() cannot issue statements that do not produce result sets.
+  2022-05-23 15:34:18,738 [main] INFO  (ContextListener.java:26) - Context listener start working
+  2022-05-23 15:35:17,187 [http-nio-8080-exec-3] ERROR (UserDao.java:93) - Statement.executeQuery() cannot issue statements that do not produce result sets.
+  2022-05-23 15:35:54,610 [main] INFO  (ContextListener.java:26) - Context listener start working
+  2022-05-23 15:36:49,664 [http-nio-8080-exec-7] ERROR (UserDao.java:92) - Duplicate entry 'rfsvsfrd' for key 'user_table.user_login'
+  2022-05-23 15:36:56,164 [http-nio-8080-exec-5] ERROR (UserDao.java:92) - Duplicate entry 'rfsvsfrd' for key 'user_table.user_login'
+  2022-05-23 15:38:11,122 [main] INFO  (ContextListener.java:26) - Context listener start working
+  2022-05-23 15:38:55,935 [http-nio-8080-exec-4] ERROR (UserDao.java:66) - Statement.executeQuery() cannot issue statements that do not produce result sets.
+  2022-05-23 15:39:02,763 [http-nio-8080-exec-5] ERROR (UserDao.java:66) - Statement.executeQuery() cannot issue statements that do not produce result sets.
+  2022-05-23 15:39:03,614 [http-nio-8080-exec-6] ERROR (UserDao.java:66) - Statement.executeQuery() cannot issue statements that do not produce result sets.
+  2022-05-23 15:39:05,319 [http-nio-8080-exec-7] ERROR (UserDao.java:66) - Statement.executeQuery() cannot issue statements that do not produce result sets.
+  2022-05-23 15:39:07,203 [http-nio-8080-exec-8] ERROR (UserDao.java:66) - Statement.executeQuery() cannot issue statements that do not produce result sets.
+  2022-05-23 15:39:17,429 [main] INFO  (ContextListener.java:26) - Context listener start working
+  2022-05-23 15:39:28,392 [http-nio-8080-exec-3] ERROR (UserDao.java:66) - Statement.executeQuery() cannot issue statements that do not produce result sets.
+  2022-05-23 15:39:28,960 [http-nio-8080-exec-4] ERROR (UserDao.java:66) - Statement.executeQuery() cannot issue statements that do not produce result sets.
+  2022-05-23 15:39:29,275 [http-nio-8080-exec-5] ERROR (UserDao.java:66) - Statement.executeQuery() cannot issue statements that do not produce result sets.
+  2022-05-23 15:39:29,524 [http-nio-8080-exec-6] ERROR (UserDao.java:66) - Statement.executeQuery() cannot issue statements that do not produce result sets.
+  2022-05-23 15:39:30,262 [http-nio-8080-exec-7] ERROR (UserDao.java:66) - Statement.executeQuery() cannot issue statements that do not produce result sets.
+  2022-05-23 15:40:22,932 [main] INFO  (ContextListener.java:26) - Context listener start working
+  2022-05-23 15:44:32,148 [main] INFO  (ContextListener.java:26) - Context listener start working
+  2022-05-23 15:44:45,217 [main] INFO  (ContextListener.java:26) - Context listener start working
+  2022-05-23 15:46:12,999 [http-nio-8080-exec-3] ERROR (UserDao.java:92) - Duplicate entry 'user6' for key 'user_table.user_login'
+  2022-05-23 15:46:30,315 [http-nio-8080-exec-5] ERROR (DaoUserBuilder.java:25) - Before start of result set
+  2022-05-23 15:47:15,305 [main] INFO  (ContextListener.java:26) - Context listener start working
+  2022-05-23 15:47:33,494 [http-nio-8080-exec-3] ERROR (DaoUserBuilder.java:25) - Before start of result set
+  2022-05-23 15:47:37,525 [http-nio-8080-exec-4] ERROR (DaoUserBuilder.java:25) - Before start of result set
+  2022-05-23 16:07:35,648 [main] INFO  (ContextListener.java:26) - Context listener start working
+  2022-05-23 16:08:27,393 [http-nio-8080-exec-5] ERROR (UserDao.java:92) - Duplicate entry 'user7' for key 'user_table.user_login'
+  2022-05-23 16:08:37,806 [http-nio-8080-exec-6] ERROR (UserDao.java:92) - Duplicate entry 'user7' for key 'user_table.user_login'
+  2022-05-23 16:09:20,119 [http-nio-8080-exec-3] ERROR (DaoUserBuilder.java:25) - Illegal operation on empty result set.
+  2022-05-23 16:09:43,614 [http-nio-8080-exec-6] ERROR (DaoUserBuilder.java:25) - Before start of result set
+  2022-05-23 16:09:47,834 [http-nio-8080-exec-7] ERROR (DaoUserBuilder.java:25) - Before start of result set
+  2022-05-23 16:09:50,394 [http-nio-8080-exec-8] ERROR (DaoUserBuilder.java:25) - Before start of result set
+  2022-05-23 16:10:28,314 [main] INFO  (ContextListener.java:26) - Context listener start working
+  2022-05-23 16:10:42,205 [http-nio-8080-exec-3] ERROR (DaoUserBuilder.java:25) - Before start of result set
+  2022-05-23 16:11:11,156 [http-nio-8080-exec-4] ERROR (DaoUserBuilder.java:25) - Before start of result set
+  2022-05-23 16:12:18,778 [main] INFO  (ContextListener.java:26) - Context listener start working
+  2022-05-23 16:12:39,982 [http-nio-8080-exec-3] ERROR (DaoUserBuilder.java:25) - Before start of result set
+  2022-05-23 16:13:25,648 [http-nio-8080-exec-4] ERROR (DaoUserBuilder.java:25) - Before start of result set
+  2022-05-23 16:16:54,385 [main] INFO  (ContextListener.java:26) - Context listener start working
+  2022-05-23 16:17:16,022 [http-nio-8080-exec-6] ERROR (DaoUserBuilder.java:25) - Before start of result set
+  2022-05-23 16:17:18,390 [http-nio-8080-exec-7] ERROR (DaoUserBuilder.java:25) - Before start of result set
+  2022-05-23 16:18:14,210 [main] INFO  (ContextListener.java:26) - Context listener start working
+  2022-05-23 16:23:02,549 [main] INFO  (ContextListener.java:26) - Context listener start working
+  2022-05-23 16:25:59,865 [http-nio-8080-exec-4] ERROR (DaoUserBuilder.java:25) - Before start of result set
+  2022-05-23 16:36:25,132 [main] INFO  (ContextListener.java:26) - Context listener start working
+  2022-05-23 16:38:11,108 [main] INFO  (ContextListener.java:26) - Context listener start working
+  2022-05-23 16:38:17,140 [main] INFO  (ContextListener.java:26) - Context listener start working
+  2022-05-23 16:38:24,299 [http-nio-8080-exec-2] ERROR (DaoUserBuilder.java:25) - Before start of result set
+  2022-05-23 16:41:51,014 [main] INFO  (ContextListener.java:26) - Context listener start working
+  2022-05-23 16:42:22,944 [main] INFO  (ContextListener.java:26) - Context listener start working
+  2022-05-23 16:42:35,838 [http-nio-8080-exec-5] ERROR (UserDao.java:112) - Statement.executeQuery() cannot issue statements that do not produce result sets.
+  2022-05-23 16:42:39,800 [http-nio-8080-exec-7] ERROR (UserDao.java:112) - Statement.executeQuery() cannot issue statements that do not produce result sets.
+  2022-05-23 16:42:43,336 [http-nio-8080-exec-9] ERROR (UserDao.java:112) - Statement.executeQuery() cannot issue statements that do not produce result sets.
+  2022-05-23 16:42:49,066 [http-nio-8080-exec-1] ERROR (UserDao.java:112) - Statement.executeQuery() cannot issue statements that do not produce result sets.
+  2022-05-23 16:42:52,480 [http-nio-8080-exec-3] ERROR (UserDao.java:112) - Statement.executeQuery() cannot issue statements that do not produce result sets.
+  2022-05-23 16:43:22,112 [http-nio-8080-exec-6] ERROR (UserDao.java:112) - Statement.executeQuery() cannot issue statements that do not produce result sets.
+  2022-05-23 16:43:26,303 [http-nio-8080-exec-8] ERROR (UserDao.java:112) - Statement.executeQuery() cannot issue statements that do not produce result sets.
+  2022-05-23 16:43:34,131 [main] INFO  (ContextListener.java:26) - Context listener start working
+  2022-05-23 16:45:24,790 [main] INFO  (ContextListener.java:26) - Context listener start working
+  2022-05-23 16:46:24,664 [main] INFO  (ContextListener.java:26) - Context listener start working
+  2022-05-23 16:46:36,547 [main] INFO  (ContextListener.java:26) - Context listener start working
+  2022-05-23 16:48:41,213 [main] INFO  (ContextListener.java:26) - Context listener start working
+  2022-05-23 16:50:31,669 [main] INFO  (ContextListener.java:26) - Context listener start working
+  2022-05-23 16:51:06,116 [main] INFO  (ContextListener.java:26) - Context listener start working
+  2022-05-23 16:52:58,292 [main] INFO  (ContextListener.java:26) - Context listener start working
+  2022-05-23 17:05:23,982 [http-nio-8080-exec-7] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-05-23 17:06:44,655 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-23 17:07:00,378 [http-nio-8080-exec-5] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-05-23 17:07:36,388 [http-nio-8080-exec-9] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-05-23 17:08:06,727 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-23 17:08:13,771 [http-nio-8080-exec-2] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-05-23 17:10:44,883 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-23 17:11:10,686 [http-nio-8080-exec-1] ERROR (AuthFilter.java:59) - /WEB-INF/view/user/user_menu.jsp (line: [1], column: [2]) JSP file [/WEB-INF/jspf/directive/taglib.jspf] not found
+  2022-05-23 17:11:23,233 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-23 17:11:43,329 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-23 17:11:57,626 [http-nio-8080-exec-3] ERROR (AuthFilter.java:59) - /WEB-INF/view/user/user_menu.jsp (line: [1], column: [2]) JSP file [/WEB-INF/jspf/directive/taglib.jspf] not found
+  2022-05-23 17:12:42,246 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-23 17:12:55,159 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-23 17:14:19,534 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-23 17:14:43,444 [http-nio-8080-exec-5] ERROR (AuthFilter.java:59) - /WEB-INF/view/user/user_menu.jsp (line: [1], column: [2]) JSP file [/WEB-INF/jspf/directive/taglib.jspf] not found
+  2022-05-23 17:15:43,488 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-23 17:20:16,498 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-23 17:20:24,275 [http-nio-8080-exec-3] ERROR (AuthFilter.java:59) - javax.servlet.ServletException: JSP file [&#47;WEB-INF&#47;_scripts.jsp] not found
+  2022-05-23 17:21:39,361 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-23 17:23:11,065 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-23 17:24:02,738 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-23 17:57:54,242 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-23 18:00:27,048 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-23 18:00:45,335 [main] INFO  (ContextListener.java:24) - Context listener start working
+  
