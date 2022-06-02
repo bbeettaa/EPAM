@@ -78,4 +78,5 @@ Stacktrace:
   2022-06-02 12:40:11,198 [http-nio-8080-exec-8] DEBUG (LogoutCommand.java:21) - Logout finished
   2022-06-02 12:44:42,356 [main] INFO  (ContextListener.java:24) - Context listener start working
   2022-06-02 12:45:48,482 [http-nio-8080-exec-8] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-02 13:39:25,727 [main] INFO  (ContextListener.java:24) - Context listener start working
   
