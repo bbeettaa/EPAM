@@ -49,7 +49,7 @@ public class LoginCommand implements ICommand {
                 forward = ViewPath.SPEAKER_MENU_COMMAND;
             }
             else if (userRole == Role.USER) {
-                forward = ViewPath.USER_MENU;
+                forward = ViewPath.USER_MENU_COMMAND;
             }
 
 

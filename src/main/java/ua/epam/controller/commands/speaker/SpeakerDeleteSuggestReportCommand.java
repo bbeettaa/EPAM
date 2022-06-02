@@ -5,10 +5,13 @@ import ua.epam.controller.ViewPath;
 import ua.epam.controller.commands.ICommand;
 import ua.epam.dao.EventRepo;
 import ua.epam.models.entities.SuggestReportPool;
+import ua.epam.models.entities.event.IEvent;
+import ua.epam.models.entities.report.IReport;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
 public class SpeakerDeleteSuggestReportCommand implements ICommand {
 
@@ -17,10 +20,8 @@ public class SpeakerDeleteSuggestReportCommand implements ICommand {
         String response = ViewPath.ERROR_PAGE;
         try {
             req.setCharacterEncoding("UTF-8");
-            final int id = Integer.parseInt(req.getParameter("reportId"));
-            SuggestReportPool.getEntity().getSuggestion().remove(
-                    SuggestReportPool.getEntity().getSuggestion().stream().filter(e->e.getId()==id).findFirst().orElse(null)
-            );
+            final String reportName = req.getParameter("reportName");
+            SuggestReportPool.getEntity().deleteByName(reportName);
             response = ViewPath.SPEAKER_ALL_SUGGEST_REPORT_COMMAND;
         } catch (IOException e) {
             AppContext.LOGGER.error(e.getMessage());

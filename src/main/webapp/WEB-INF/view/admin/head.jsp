@@ -23,6 +23,7 @@
       background-color: gray;
       padding: 10px;
       width: 101%;
+      height: 96px;
       font-size: 30px;
       text-align: right;
       position: relative;
@@ -50,6 +51,14 @@
       text-align: center;
     }
 
+    .nav input {
+      font-size: 20px;
+      display: inline-block;
+      width: 120px;
+      height: 35px;
+      padding:10px;
+      text-align: center;
+    }
 
     /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
     @media (max-width: 600px) {
@@ -68,19 +77,26 @@
   <form method="post" action="">
     <label>${title}</label>
     <input type="hidden" name="action" value="logout" >
-    <button type="submit" ><fmt:message key="act.logout"/></button>
+    <button type="submit" ><fmt:message key="label.button.logout"/></button>
   </form>
   <!-- choose language -->
-  <form action="" method="post" >
-    <label style="font-size: 20px; margin-right: 0"><fmt:message key="label.selectLanguage"/>:</label>
+  <form action="" method="post" style="text-align: right">
+    <label style="font-size: 20px; margin-right: 0"><fmt:message key="label.button.selectLanguage"/>:</label>
     <select id="language" name="language" onchange="submit()">
       <option value="en_EN" ${language == 'en_EN' ? 'selected' : ''}>English</option>
-      <option value="ru_RU" ${language == 'ru_RU' ? 'selected' : ''}>Русский</option>
+ <%--     <option value="ru_RU" ${language == 'ru_RU' ? 'selected' : ''}>Русский</option>--%>
       <option value="uk" ${language == 'uk' ? 'selected' : ''}>Українська</option>
-      <input type="hidden" name="login" value="${login}">
-      <input type="hidden" name="password" value="${password}">
     </select>
   </form>
+
+
+    <form method="post" action="" style="text-align: left">
+      <input type="hidden" name="action" value="adminMenu"/>
+      <ul class="nav" style="margin-top: -70px;margin-left: -30px">
+        <li><input  type="submit"  value="<fmt:message key="label.button.toMain"/>"></li>
+      </ul>
+    </form>
+
 </div>
 
 

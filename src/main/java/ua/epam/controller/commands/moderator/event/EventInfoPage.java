@@ -3,6 +3,7 @@ package ua.epam.controller.commands.moderator.event;
 import ua.epam.AppContext;
 import ua.epam.controller.ViewPath;
 import ua.epam.controller.commands.ICommand;
+import ua.epam.models.entities.ActiveEventsPool;
 import ua.epam.models.entities.event.IEvent;
 
 import javax.servlet.http.HttpServletRequest;
@@ -13,11 +14,17 @@ public class EventInfoPage implements ICommand {
     @Override
     public String execute(HttpServletRequest req, HttpServletResponse resp) {
         String idStr = String.valueOf(req.getAttribute("id"));
-        if(Objects.equals(idStr, "null"))
+        if(Objects.equals(idStr, "null")) {
             idStr = req.getParameter("id");
+            req.setAttribute("id",idStr);
+        }
 
         IEvent event = AppContext.EVENT_REPO.get().get(Integer.parseInt(idStr));
         req.setAttribute("event", event);
+        req.setAttribute("startEvent", ActiveEventsPool.getEntity().isActive(Integer.parseInt(idStr)));
+
+        req.setAttribute("joinedUsers", ActiveEventsPool.getEntity().getStatistic(event.getId()));
+
         return ViewPath.EVENT_INFO;
     }
 }

@@ -16,6 +16,7 @@ public class ModeratorSuggestReportsPage implements ICommand {
         try {
             req.setCharacterEncoding("UTF-8");
 
+            req.setAttribute("events", AppContext.EVENT_REPO.get());
             req.setAttribute("dao", SuggestReportPool.getEntity().getSuggestion());
             response = ViewPath.MODERATOR_SUGGEST_REPORTS_PAGE;
         } catch (IOException e) {

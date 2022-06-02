@@ -24,6 +24,7 @@
             padding: 10px;
             width: 101%;
             font-size: 30px;
+            height: 87px;
           /*  text-align: right;*/
             position: relative;
             justify-content: space-between;
@@ -74,34 +75,32 @@
 
 
 <div class="header">
-    <label style="margin-left: 45%">${title}</label>
+    <label style="margin-left: 42%"><fmt:message key="title.speakerPanel"/></label>
     <!-- logout -->
     <form method="post" action="" style="margin-left: 94.3%; margin-top: -40px">
         <input type="hidden" name="action" value="logout" >
-        <button type="submit" ><fmt:message key="act.logout"/></button>
+        <button type="submit" ><fmt:message key="label.button.logout"/></button>
     </form>
     <!-- choose language -->
-    <form action="" method="post"  style="margin-left: 82%">
-        <label style="font-size: 20px; margin-right: 0"><fmt:message key="label.selectLanguage"/>:</label>
+    <form action="" method="post" style="text-align: right">
+        <label style="font-size: 20px; margin-right: 0"><fmt:message key="label.button.selectLanguage"/>:</label>
         <select id="language" name="language" onchange="submit()">
             <option value="en_EN" ${language == 'en_EN' ? 'selected' : ''}>English</option>
-            <option value="ru_RU" ${language == 'ru_RU' ? 'selected' : ''}>Русский</option>
+<%--            <option value="ru_RU" ${language == 'ru_RU' ? 'selected' : ''}>Русский</option>--%>
             <option value="uk" ${language == 'uk' ? 'selected' : ''}>Українська</option>
-            <input type="hidden" name="login" value="${login}">
-            <input type="hidden" name="password" value="${password}">
         </select>
     </form>
 
     <form method="post" action="">
         <input type="hidden" name="action" value="speakerCabinet"/>
         <ul class="nav" style="margin-top: -70px">
-            <li><input type="submit"  value="<fmt:message key="label.Main"/>"></li>
+            <li><input type="submit" value="<fmt:message key="label.button.toMain"/>"></li>
         </ul>
     </form>
     <form style="margin-left: 150px" method="post" action="">
         <input type="hidden" name="action" value="allSuggestReports"/>
         <ul class="nav" style="margin-top: -67px">
-            <li><input type="submit" value="<fmt:message key="label.Main"/>"></li>
+            <li><input style="width: 170px" type="submit" value="<fmt:message key="label.button.allMySuggestReports"/>"></li>
         </ul>
     </form>
 

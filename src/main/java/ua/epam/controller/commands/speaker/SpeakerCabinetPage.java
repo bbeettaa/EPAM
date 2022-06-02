@@ -15,15 +15,16 @@ import java.util.List;
 import java.util.Objects;
 
 import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
 
 public class SpeakerCabinetPage implements ICommand {
     @Override
     public String execute(HttpServletRequest req, HttpServletResponse resp) {
-        searchName(req, SortEvent(req));
+        pagination(req, searchName(req, SortEvent(req)));
         return ViewPath.SPEAKER_MENU_PAGE;
     }
 
-    private String searchName(HttpServletRequest req, List<IEvent> eventList) {
+    private List<IEvent> searchName(HttpServletRequest req, List<IEvent> eventList) {
         String str = (req.getParameter("searchName")==null)?"":req.getParameter("searchName");
 
         List<IEvent> dao = new ArrayList<>();
@@ -35,10 +36,9 @@ public class SpeakerCabinetPage implements ICommand {
             if(event.getName().contains(str) && isNull(dao.stream().filter(r->r.getName().equals(event.getName())).findFirst().orElse(null)))
                 dao.add(event);
 
-        req.setAttribute("dao", dao);
+
         req.setAttribute("searchName", str);
-        req.setAttribute("sort", "byName");
-        return ViewPath.SPEAKER_MENU_PAGE;
+        return dao;
     }
 
     private List<IEvent> SortEvent(HttpServletRequest req){
@@ -49,6 +49,7 @@ public class SpeakerCabinetPage implements ICommand {
         Comparator<IEvent> comparator =Comparator.comparing(IEvent::getName);
 
         switch (sort){
+            default:
             case "byName":
                 req.setAttribute("sort","byName");
                 break;
@@ -78,7 +79,25 @@ public class SpeakerCabinetPage implements ICommand {
             req.setAttribute("order","asc");
 
         eventList.sort(comparator);
-        //req.setAttribute("dao", eventList);
         return eventList;
+    }
+
+    private void pagination(HttpServletRequest req, List<IEvent> eventList) {
+        int pageNum = Integer.parseInt(nonNull(req.getParameter("pageNum"))?req.getParameter("pageNum"):"1");
+        int contentCount = Integer.parseInt(nonNull(req.getParameter("contentCount"))?req.getParameter("contentCount"):"10");
+        int countPages = eventList.size() / contentCount + 1;
+
+        req.setAttribute("pageNum",pageNum);
+        req.setAttribute("contentCount",contentCount);
+        req.setAttribute("countPages",countPages);
+
+        pageNum--;
+        List<IEvent> dao = new ArrayList<>();
+        for (int i = pageNum*contentCount; i < pageNum*contentCount+contentCount; i++)
+            if (i >= eventList.size())
+                break;
+            else
+                dao.add(eventList.get(i));
+        req.setAttribute("dao", dao);
     }
 }

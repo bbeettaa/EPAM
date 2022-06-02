@@ -1,39 +1,81 @@
-2022-05-30 01:45:25,745 [main] INFO  (ContextListener.java:24) - Context listener start working
-  2022-05-30 01:47:39,598 [http-nio-8080-exec-3] ERROR (AuthFilter.java:72) - Cannot invoke "String.equals(Object)" because the return value of "ua.epam.models.entities.user.IUser.getEmail()" is null
-  2022-05-30 01:47:55,805 [main] INFO  (ContextListener.java:24) - Context listener start working
-  2022-05-30 01:47:58,921 [http-nio-8080-exec-1] ERROR (AuthFilter.java:72) - Cannot invoke "String.equals(Object)" because the return value of "ua.epam.models.entities.user.IUser.getEmail()" is null
-  2022-05-30 01:48:17,483 [http-nio-8080-exec-2] ERROR (AuthFilter.java:72) - Cannot invoke "String.equals(Object)" because the return value of "ua.epam.models.entities.user.IUser.getEmail()" is null
-  2022-05-30 01:48:54,560 [http-nio-8080-exec-4] ERROR (AuthFilter.java:72) - Cannot invoke "String.equals(Object)" because the return value of "ua.epam.models.entities.user.IUser.getEmail()" is null
-  2022-05-30 01:49:22,677 [main] INFO  (ContextListener.java:24) - Context listener start working
-  2022-05-30 01:49:35,152 [http-nio-8080-exec-3] ERROR (Controller.java:35) - javax.servlet.ServletException: JSP file [&#47;WEB-INF&#47;head.jsp] not found
-  2022-05-30 01:49:53,258 [main] INFO  (ContextListener.java:24) - Context listener start working
-  2022-05-30 01:51:03,454 [main] INFO  (ContextListener.java:24) - Context listener start working
-  2022-05-30 01:53:40,694 [main] INFO  (ContextListener.java:24) - Context listener start working
-  2022-05-30 01:55:04,458 [main] INFO  (ContextListener.java:24) - Context listener start working
-  2022-05-30 01:55:15,260 [http-nio-8080-exec-1] ERROR (AuthFilter.java:72) - Cannot invoke "String.equals(Object)" because the return value of "ua.epam.models.entities.user.IUser.getEmail()" is null
-  2022-05-30 01:55:43,407 [main] INFO  (ContextListener.java:24) - Context listener start working
-  2022-05-30 01:57:44,467 [main] INFO  (ContextListener.java:24) - Context listener start working
-  2022-05-30 02:04:35,796 [main] INFO  (ContextListener.java:24) - Context listener start working
-  2022-05-30 02:28:00,872 [main] INFO  (ContextListener.java:24) - Context listener start working
-  2022-05-30 02:33:21,520 [http-nio-8080-exec-4] DEBUG (LogoutCommand.java:19) - Logout finished
-  2022-05-30 02:34:39,613 [main] INFO  (ContextListener.java:24) - Context listener start working
-  2022-05-30 02:35:03,115 [http-nio-8080-exec-5] DEBUG (LogoutCommand.java:19) - Logout finished
-  2022-05-30 02:37:07,858 [main] INFO  (ContextListener.java:24) - Context listener start working
-  2022-05-30 02:42:00,956 [main] INFO  (ContextListener.java:24) - Context listener start working
-  2022-05-30 02:43:50,380 [http-nio-8080-exec-6] ERROR (UserBuilder.java:32) - Cannot invoke "String.toUpperCase()" because the return value of "javax.servlet.http.HttpServletRequest.getParameter(String)" is null
-  2022-05-30 02:43:50,380 [http-nio-8080-exec-6] ERROR (AuthFilter.java:72) - Cannot parse null string
-  2022-05-30 02:43:56,627 [http-nio-8080-exec-8] ERROR (UserBuilder.java:32) - Cannot invoke "String.toUpperCase()" because the return value of "javax.servlet.http.HttpServletRequest.getParameter(String)" is null
-  2022-05-30 02:43:56,627 [http-nio-8080-exec-8] ERROR (AuthFilter.java:72) - Cannot parse null string
-  2022-05-30 02:44:50,953 [http-nio-8080-exec-1] ERROR (AuthFilter.java:72) - Cannot parse null string
-  2022-05-30 02:44:56,693 [http-nio-8080-exec-3] ERROR (AuthFilter.java:72) - Cannot parse null string
-  2022-05-30 02:45:18,392 [main] INFO  (ContextListener.java:24) - Context listener start working
-  2022-05-30 02:45:28,141 [http-nio-8080-exec-4] ERROR (AuthFilter.java:72) - Cannot parse null string
-  2022-05-30 02:45:45,418 [main] INFO  (ContextListener.java:24) - Context listener start working
-  2022-05-30 02:45:56,560 [http-nio-8080-exec-4] ERROR (AuthFilter.java:72) - Cannot parse null string
-  2022-05-30 02:47:05,958 [main] INFO  (ContextListener.java:24) - Context listener start working
-  2022-05-30 02:47:27,439 [main] INFO  (ContextListener.java:24) - Context listener start working
-  2022-05-30 02:52:34,637 [main] INFO  (ContextListener.java:24) - Context listener start working
-  2022-05-30 02:53:59,812 [main] INFO  (ContextListener.java:24) - Context listener start working
-  2022-05-30 02:54:22,264 [main] INFO  (ContextListener.java:24) - Context listener start working
-  2022-05-30 03:03:54,000 [main] INFO  (ContextListener.java:24) - Context listener start working
+2022-06-02 02:28:52,945 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-02 02:57:27,503 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-02 02:59:42,098 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-02 03:13:04,301 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-02 03:13:05,018 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-02 03:13:08,720 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-02 03:13:12,461 [http-nio-8080-exec-2] ERROR (AuthFilter.java:73) - Cannot parse null string
+  2022-06-02 03:13:19,502 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-02 03:15:10,439 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-02 03:16:22,964 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-02 03:17:09,566 [http-nio-8080-exec-4] ERROR (AuthFilter.java:73) - Cannot parse null string
+  2022-06-02 03:17:32,795 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-02 03:19:34,476 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-02 03:20:29,597 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-02 03:21:44,534 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-02 03:23:06,953 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-02 03:23:49,095 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-02 03:25:50,638 [http-nio-8080-exec-9] ERROR (Controller.java:35) - Произошла ошибка при обработке [/WEB-INF/view/user/userMenu.jsp] в строке [194]
+
+191: 
+192: 
+193:             <c:choose>
+194:                 <c:when test="${requestScope.pageNum+1 != dao.size}">
+195:                     <input type="submit" style="margin-left: 25px" name="pageNum" value="${requestScope.pageNum+1}">
+196:                 </c:when>
+197:             </c:choose>
+
+
+Stacktrace:
+  2022-06-02 03:27:39,510 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-02 03:28:50,229 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-02 03:29:51,308 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-02 03:30:13,740 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-02 03:30:32,117 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-02 03:31:03,294 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-02 03:31:21,833 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-02 03:32:07,295 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-02 03:32:46,019 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-02 03:33:26,030 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-02 03:35:36,637 [http-nio-8080-exec-4] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-02 03:35:55,118 [http-nio-8080-exec-9] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-02 03:37:02,052 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-02 03:38:03,678 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-02 03:45:48,943 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-02 03:50:42,671 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-02 03:59:11,552 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-02 04:16:08,701 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-02 04:18:21,238 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-02 04:20:23,993 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-02 04:21:00,405 [http-nio-8080-exec-8] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-02 04:25:14,372 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-02 04:27:35,000 [http-nio-8080-exec-4] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-02 04:27:43,281 [http-nio-8080-exec-7] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-02 04:28:13,448 [http-nio-8080-exec-10] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-02 04:28:58,031 [http-nio-8080-exec-9] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-02 04:30:01,988 [http-nio-8080-exec-3] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-02 04:30:22,793 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-02 12:15:35,739 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-02 12:18:22,227 [http-nio-8080-exec-4] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-02 12:20:00,193 [http-nio-8080-exec-9] ERROR (AuthFilter.java:73) - Text '' could not be parsed at index 0
+  2022-06-02 12:22:47,112 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-02 12:26:51,274 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-02 12:27:38,646 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-02 12:29:09,961 [http-nio-8080-exec-7] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-02 12:30:22,007 [http-nio-8080-exec-1] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-02 12:30:40,704 [http-nio-8080-exec-6] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-02 12:32:20,286 [http-nio-8080-exec-8] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-02 12:32:54,955 [http-nio-8080-exec-4] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-02 12:33:12,687 [http-nio-8080-exec-1] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-02 12:35:22,950 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-02 12:35:43,066 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-02 12:36:15,347 [http-nio-8080-exec-1] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-02 12:37:48,436 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-02 12:38:29,413 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-02 12:38:56,759 [http-nio-8080-exec-6] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-02 12:39:04,376 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-02 12:39:34,576 [http-nio-8080-exec-7] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-02 12:40:11,198 [http-nio-8080-exec-8] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-02 12:44:42,356 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-02 12:45:48,482 [http-nio-8080-exec-8] DEBUG (LogoutCommand.java:21) - Logout finished
   

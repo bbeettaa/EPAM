@@ -21,6 +21,7 @@ public class SpeakerAllSuggestReports implements ICommand {
 
             int id = AppContext.USER_REPO.get().get(String.valueOf(req.getSession().getAttribute("login"))).getId();
             req.setAttribute("dao", SuggestReportPool.getEntity().getSuggestion(id));
+            req.setAttribute("events", AppContext.EVENT_REPO.get());
 
             response = ViewPath.SPEAKER_SUGGEST_REPORT_PAGE;
         } catch (IOException e) {

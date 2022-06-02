@@ -39,6 +39,9 @@
 
       margin-left: 34%;
     }
+    .search{
+      border: 2px solid black;
+    }
   </style>
 </head>
 <body>
@@ -48,27 +51,25 @@
 
 <div class="sidenav">
 
-
-  <br/><h2><fmt:message key="title.suggestReport"/></h2>
-  <form method="post" action="">
-    <div class="createUser">
-      <input type="hidden" name="action" value="suggestReport">
-      <input type="hidden" name="eventId" value="${requestScope.event.id}"/>
-      <input type="submit" value="<fmt:message key="act.suggestReport"/>" name="Ok"><br>
-    </div>
-  </form>
+  <div class="search">
+    <form method="post" action="" style="margin-left: 10px"><br>
+      <label><fmt:message key="title.suggestReport"/></label>
+      <div class="createUser">
+        <input type="hidden" name="action" value="suggestReport">
+        <input type="hidden" name="eventId" value="${requestScope.event.id}"/>
+        <input type="submit" value="<fmt:message key="label.button.create"/>" name="Ok"><br>
+      </div>
+    </form><br>
+  </div>
 </div>
 
 
 <table>
-  <caption style="font-size:160%;"> <fmt:message key="title.infoEvent"/> </caption>
+  <caption style="font-size:160%;"> <fmt:message key="title.eventInfo"/> </caption>
   <tr>
-    <%--<th><fmt:message key="label.id"/></th>
-    <th><fmt:message key="label.login"/></th>
-    <th><fmt:message key="label.password"/></th>--%>
-    <th>report id</th>
-    <th>event name</th>
-    <th>date</th>
+    <th><fmt:message key="label.event.id"/></th>
+    <th><fmt:message key="label.event.name"/></th>
+    <th><fmt:message key="label.event.date"/></th>
   </tr>
 
   <tr>
@@ -83,14 +84,11 @@
 </table>
 
 <table>
-  <caption style="font-size:160%;"> <fmt:message key="title.allUsers"/> </caption>
+  <caption style="font-size:160%;"> <fmt:message key="title.allReports"/> </caption>
   <tr>
-    <%--<th><fmt:message key="label.id"/></th>
-    <th><fmt:message key="label.login"/></th>
-    <th><fmt:message key="label.password"/></th>--%>
-    <th>report id</th>
-    <th>report name</th>
-    <th>speaker</th>
+    <th><fmt:message key="label.report.id"/></th>
+    <th><fmt:message key="label.report.name"/></th>
+    <th><fmt:message key="label.speaker.name"/></th>
   </tr>
   <c:forEach var="report" items="${requestScope.event.reports}">
     <tr>
@@ -105,7 +103,7 @@
             <input type="hidden" name="reportId" value="${report.id}"/>
             <c:choose>
               <c:when test="${report.speaker.login == sessionScope.login}">
-                <input type="submit" value="update"/>
+                <input type="submit" value="<fmt:message key="label.button.update"/>"/>
               </c:when>
             </c:choose>
           </form>
@@ -117,7 +115,7 @@
             <input type="hidden"  name="reportId" value="${report.id}"/>
             <c:choose>
               <c:when test="${report.speaker.login == sessionScope.login}">
-                <input type="submit" value="unsubscribe"/>
+                <input type="submit" value="<fmt:message key="label.button.delete"/>"/>
               </c:when>
             </c:choose>
           </form>

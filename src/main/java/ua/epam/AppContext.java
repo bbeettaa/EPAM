@@ -4,6 +4,7 @@ package ua.epam;
 import org.apache.log4j.Logger;
 import ua.epam.dao.EventRepo;
 import ua.epam.dao.ReportRepo;
+import ua.epam.dao.SubscribeRepo;
 import ua.epam.dao.UserRepo;
 import ua.epam.dao.utils.SpeakerRepo;
 
@@ -15,6 +16,7 @@ public class AppContext {
     }
 
 
+    public static final AtomicReference<SubscribeRepo> SUBSCRIBES_REPO = new AtomicReference<>(new SubscribeRepo());
     public static final AtomicReference<SpeakerRepo> SPEAKER_REPO = new AtomicReference<>(new SpeakerRepo());
     public static final AtomicReference<ReportRepo> REPORTS_REPO = new AtomicReference<>(new ReportRepo());
     public static final AtomicReference<EventRepo> EVENT_REPO = new AtomicReference<>(new EventRepo());

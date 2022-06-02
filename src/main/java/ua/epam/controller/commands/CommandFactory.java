@@ -8,12 +8,15 @@ import ua.epam.controller.commands.common.RegistrationPage;
 import ua.epam.controller.commands.moderator.event.SortEvent;
 import ua.epam.controller.commands.moderator.*;
 import ua.epam.controller.commands.moderator.event.*;
+import ua.epam.controller.commands.moderator.event.stream.StartEvent;
+import ua.epam.controller.commands.moderator.event.stream.StopEvent;
 import ua.epam.controller.commands.moderator.report.*;
 import ua.epam.controller.commands.moderator.event.UpdateEventPage;
 import ua.epam.controller.commands.moderator.report.suggestion.AcceptSuggestion;
 import ua.epam.controller.commands.moderator.report.suggestion.DeclineSuggestion;
 import ua.epam.controller.commands.moderator.report.suggestion.ModeratorSuggestReportsPage;
 import ua.epam.controller.commands.speaker.*;
+import ua.epam.controller.commands.user.*;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
@@ -41,6 +44,7 @@ public class CommandFactory {
         commands.put("login", new LoginCommand());
         commands.put("registration", new RegistrationPage());
         commands.put("registrationCommand", new RegistrationCommand());
+        commands.put("sortEvent", new SortEvent());
 
         // admin commands
         commands.put("addUser", new AddUserCommand());
@@ -69,8 +73,8 @@ public class CommandFactory {
         commands.put("createReportPage", new CreateReportPage());
         commands.put("searchNameEvent", new SearchEvent());
 
-        //common
-        commands.put("sortEvent", new SortEvent());
+        commands.put("startEvent", new StartEvent());
+        commands.put("stopEvent", new StopEvent());
 
         //speaker
         commands.put("speakerCabinet", new SpeakerCabinetPage());
@@ -82,12 +86,13 @@ public class CommandFactory {
         commands.put("allSuggestReports", new SpeakerAllSuggestReports());
         commands.put("deleteSuggestReport", new SpeakerDeleteSuggestReportCommand());
 
-        // client commands
-/*        commands.put("account", new AccountCommand());
-        commands.put("personal_data", new PersonalDataCommand());
-        commands.put("user_profile", new UserProfileCommand());
-        commands.put("transactions", new TransactionCommand());
-        commands.put("save_profile", new SaveUserProfileCommand());*/
+        //user
+        commands.put("userMenu", new UserMenuPage());
+        commands.put("userEventInfo", new UserEventInfoPage());
+        commands.put("subscribes",new UserSubscribesMenu());
+        commands.put("userSubscribesEvent",new UserSubscribesEvent());
+        commands.put("unsubscribe",new UnsubscribeUserEvent());
+        commands.put("join", new JoinToEvent());
     }
 
     public ICommand getCommand(HttpServletRequest req) {

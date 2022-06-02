@@ -63,74 +63,88 @@
 <div class="sidenav">
     <div class="search">
         <form method="post" action="" style="margin-left: 10px"><br>
-            <input type="hidden" name="action" value="searchNameEvent">
+            <input type="hidden" name="action" value="moderatorMenu">
             <div>
-                <label for="searchName"><fmt:message key="label.searchByName"/>:</label>
+                <label for="searchName"><fmt:message key="label.button.searchByName"/>:</label>
                 <input type="search" id="searchName" name="searchName" value="${requestScope.searchName}">
-                <input type="submit" value="<fmt:message key="act.search"/>">
+                <input type="hidden" id="bySubscribers1" name="sort"  value="${requestScope.sort}">
+                <input type="hidden" id="asc1" name="order" value="${requestScope.order}">
+                <input type="submit" value="<fmt:message key="label.button.search"/>">
             </div><br>
         </form>
     </div><br>
 
     <div class="search">
         <form method="post" action="" style="margin-left: 10px"><br>
-            <input type="hidden" name="action" value="sortEvent">
-            <input type="radio" id="byName" name="sort" ${requestScope.sort == 'byName' ? "checked" : '' } value="byName"><label for="byName">byName</label><br>
-            <input type="radio" id="byDate" name="sort" ${requestScope.sort == 'byDate' ? "checked" : '' } value="byDate"><label for="byDate">byDate</label><br>
-            <input type="radio" id="byReports" name="sort" ${requestScope.sort == 'byReports' ? "checked" : '' } value="byReports"><label for="byReports">byReports</label><br>
-            <input type="radio" id="bySubscribers" name="sort" ${requestScope.sort == 'bySubscribers' ? "checked" : '' } value="bySubscribers"><label for="bySubscribers">bySubscribers</label><br><br>
+            <input type="hidden" name="action" value="moderatorMenu">
+            <input type="radio" id="byName" name="sort" ${requestScope.sort == 'byName' ? "checked" : '' } value="byName"><label for="byName"><fmt:message key="label.sort.byName"/></label><br>
+            <input type="radio" id="byDate" name="sort" ${requestScope.sort == 'byDate' ? "checked" : '' } value="byDate"><label for="byDate"><fmt:message key="label.sort.byDate"/></label><br>
+            <input type="radio" id="byReports" name="sort" ${requestScope.sort == 'byReports' ? "checked" : '' } value="byReports"><label for="byReports"><fmt:message key="label.sort.byReports"/></label><br>
+            <input type="radio" id="bySubscribers" name="sort" ${requestScope.sort == 'bySubscribers' ? "checked" : '' } value="bySubscribers"><label for="bySubscribers"><fmt:message key="label.sort.bySubs"/></label><br><br>
 
-            <input type="radio" id="asc" name="order" ${requestScope.order == 'asc' ? "checked" : '' } value="asc"><label for="asc">asc</label>
-            <input type="radio" id="desc" name="order" ${requestScope.order == 'desc' ? "checked" : '' } value="desc"><label for="desc">desc</label><br>
+            <input type="radio" id="asc" name="order" ${requestScope.order == 'asc' ? "checked" : '' } value="asc"><label for="asc"><fmt:message key="label.sort.asc"/></label>
+            <input type="radio" id="desc" name="order" ${requestScope.order == 'desc' ? "checked" : '' } value="desc"><label for="desc"><fmt:message key="label.sort.desc"/></label><br>
 
-            <input type="submit" value="<fmt:message key="act.sort"/>">
+            <input type="hidden" id="searchName1" name="searchName" value="${requestScope.searchName}">
+            <input type="submit" value="<fmt:message key="label.button.sort"/>">
+        </form><br>
+    </div><br>
+    <div class="search">
+        <form method="post" action="" style="margin-left: 10px">
+            <br/><label><fmt:message key="title.createEvent"/></label>
+            <div class="createUser" >
+                <input type="hidden" name="action" value="createEventMenu">
+                <input type="submit" value="<fmt:message key="label.button.create"/>" name="Ok"><br>
+            </div>
         </form><br>
     </div>
-
-    <br/><h2><fmt:message key="title.createNewUser"/></h2>
-    <form method="post" action="">
-        <div class="createUser" >
-            <input type="hidden" name="action" value="createEventMenu">
-            <input type="submit" value="<fmt:message key="act.createUser"/>" name="Ok"><br>
-        </div>
-    </form>
 </div>
 
 <div class="columnMiddle">
-
     <table>
-        <caption style="font-size:160%;"> <fmt:message key="title.allUsers"/> </caption>
+        <caption style="font-size:160%;"> <fmt:message key="title.allEvents"/> </caption>
         <tr>
-            <%--<th><fmt:message key="label.id"/></th>
-            <th><fmt:message key="label.login"/></th>
-            <th><fmt:message key="label.password"/></th>--%>
-                <th>Name</th>
-                <th>Date</th>
-                <th>Subscribers</th>
-                <th>Reports</th>
+            <th><fmt:message key="label.event.name"/></th>
+            <th><fmt:message key="label.event.date"/></th>
+            <th><fmt:message key="label.event.subs"/></th>
+            <th><fmt:message key="label.event.reports"/></th>
         </tr>
         <c:forEach var="entity" items="${requestScope.dao}">
             <tr>
                 <ul>
-                    <td><c:out value="${entity.name}"/></td>
-
+                    <td>
+                        <c:choose>
+                            <c:when test="${requestScope.started.isActive(entity.id) == true}">
+                                <label style="color: orange"><c:out value="${entity.name}"/></label>
+                            </c:when>
+                            <c:when test="${requestScope.started.isActive(entity.id) == false}">
+                                <c:out value="${entity.name}"/>
+                            </c:when>
+                        </c:choose>
+                    </td>
                     <td><c:out value="${entity.dateBegin}"/>
-                    <c:out value="${entity.timeBegin}"/></td>
+                        <c:out value="${entity.timeBegin}"/></td>
                     <td><c:out value="${entity.subCount}"/></td>
                     <td><c:out value="${entity.reportsCount}"/></td>
 
                     <td>
                         <form method="post" action="" id="update">
                             <input type="hidden" name="action" value="infoEvent">
-                            <input type="hidden"  name="id" value="${entity.id}"/>
-                            <input type="submit" value="info"/>
+                            <input type="hidden" name="id" value="${entity.id}"/>
+                            <input type="submit" value="<fmt:message key="label.button.info"/>"/>
                         </form>
                     </td>
                     <td>
                         <form method="post" action="" id="dell">
                             <input type="hidden" name="action" value="deleteEvent">
                             <input type="hidden"  name="id" value="${entity.id}"/>
-                            <input type="submit" value="delete"/>
+
+                            <input type="hidden" name="pageNum" value="${requestScope.pageNum}"/>
+                            <input type="hidden" name="contentCount" value="${requestScope.contentCount}"/>
+                            <input type="hidden" name="searchName" value="${requestScope.searchName}">
+                            <input type="hidden" name="sort" value="${requestScope.sort}">
+                            <input type="hidden" name="order" value="${requestScope.order}">
+                            <input type="submit" value="<fmt:message key="label.button.delete"/>"/>
                         </form>
                     </td>
                 </ul>
@@ -138,14 +152,42 @@
         </c:forEach>
     </table>
 
-</div>>
+    <%--        /* pagination */--%>
+    <div style="margin-left: 45%">
 
+        <form method="post" action="">
+            <input type="hidden" name="action" value="moderatorMenu" >
+            <label><fmt:message key="label.page.current"/>: ${requestScope.pageNum}</label><br>
+            <input type="hidden" name="searchName" value="${requestScope.searchName}">
+            <input type="hidden" name="sort" value="${requestScope.sort}">
+            <input type="hidden" name="order" value="${requestScope.order}">
 
+            <c:choose>
+                <c:when test="${requestScope.pageNum-1 > 0}">
+                    <input type="submit" style="margin-right: 2px; width: 35px" name="pageNum" value="${requestScope.pageNum-1}">
+                </c:when>
+            </c:choose>
 
+            <c:choose>
+                <c:when test="${requestScope.pageNum+1 <= requestScope.countPages}">
+                    <input type="submit" style="margin-left: 2px; width: 35px" name="pageNum" value="${requestScope.pageNum+1}">
+                </c:when>
+            </c:choose>
 
+            <select id="role" name="pageNum" style="width: 50px;margin-left: 20px; width: 45px" onchange="submit()">
+                <c:forEach begin="1" end="${requestScope.countPages}" step="1" var="index">
+                    <option value="${index}" ${requestScope.pageNum == index ? 'selected' : ''}>${index}</option>
+                </c:forEach>
+            </select>
 
-
-
-
+            <br><br>
+            <label><fmt:message key="label.page.content.count"/>:</label>
+            <select id="role" name="contentCount" style="width: 50px" onchange="submit()">
+                <option value="2" ${requestScope.contentCount == '2' ? 'selected' : ''}>2</option>
+                <option value="10" ${requestScope.contentCount == '10' ? 'selected' : ''}>10</option>
+            </select><br><br>
+        </form>
+    </div>
+</div>
 </body>
 </html>

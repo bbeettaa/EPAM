@@ -77,5 +77,8 @@ public class Event implements IEvent {
         this.name = name;
     }
 
-
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
 }

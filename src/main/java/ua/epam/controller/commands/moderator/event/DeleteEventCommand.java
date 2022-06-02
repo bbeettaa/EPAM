@@ -3,6 +3,7 @@ package ua.epam.controller.commands.moderator.event;
 import ua.epam.AppContext;
 import ua.epam.controller.ViewPath;
 import ua.epam.controller.commands.ICommand;
+import ua.epam.controller.commands.moderator.event.stream.StopEvent;
 import ua.epam.dao.EventRepo;
 import ua.epam.dao.UserRepo;
 
@@ -22,6 +23,8 @@ public class DeleteEventCommand implements ICommand {
     public String execute(HttpServletRequest req, HttpServletResponse resp) {
         String response = ViewPath.ERROR_PAGE;
         try {
+            new StopEvent().execute(req,resp);
+
             req.setCharacterEncoding("UTF-8");
             final String id = req.getParameter("id");
             repo.get().delete(Integer.parseInt(id));

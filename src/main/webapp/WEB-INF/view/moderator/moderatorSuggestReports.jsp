@@ -29,37 +29,32 @@
 <jsp:include page="/WEB-INF/view/moderator/moderHead.jsp"/>
 
 <table>
-  <caption style="font-size:160%;"> <fmt:message key="title.allUsers"/> </caption>
+  <caption style="font-size:160%;"> <fmt:message key="title.suggestedReports"/> </caption>
   <tr>
-    <%--<th><fmt:message key="label.id"/></th>
-    <th><fmt:message key="label.login"/></th>
-    <th><fmt:message key="label.password"/></th>--%>
-    <th>event id</th>
-    <th>report name</th>
-    <th>speaker</th>
+    <th><fmt:message key="label.event.name"/></th>
+    <th><fmt:message key="label.report.name"/></th>
+    <th><fmt:message key="label.speaker"/></th>
   </tr>
   <c:forEach var="report" items="${requestScope.dao}">
     <tr>
       <ul>
-        <td><c:out value="${report.eventId}"/></td>
+        <td><c:out value="${requestScope.events.get(report.eventId).name}"/></td>
         <td><c:out value="${report.name}"/></td>
         <td><c:out value="${report.speaker.login}"/></td>
         <td> <form method="post" action="" id="acceptSuggestion">
             <input type="hidden" name="action" value="acceptSuggestion">
             <input type="hidden"  name="id" value="${report.eventId}"/>
-            <input type="submit" value="acceptSuggestion"/>
+            <input type="submit" value="<fmt:message key="label.suggest.accept"/>"/>
           </form> </td>
         <td> <form method="post" action="" id="declineSuggestion">
             <input type="hidden" name="action" value="declineSuggestion">
             <input type="hidden"  name="id" value="${report.eventId}"/>
-            <input type="submit" value="declineSuggestion"/>
+            <input type="submit" value="<fmt:message key="label.suggest.decline"/>"/>
           </form> </td>
-
       </ul>
     </tr>
   </c:forEach>
 </table>
-
 
 </body>
 </html>

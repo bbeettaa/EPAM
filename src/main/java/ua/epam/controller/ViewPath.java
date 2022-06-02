@@ -15,11 +15,10 @@ public class ViewPath {
     public static final String LOGIN_MENU = "WEB-INF/view/common/login.jsp";
     public static final String LOGIN_COMMAND = "controller?action=login";
     public static final String REGISTRATION_PAGE = "WEB-INF/view/common/registrationUser.jsp";
-    public static final String ERROR_PAGE = "WEB-INF/view/errorPage.jsp";
+    public static final String ERROR_PAGE = "WEB-INF/view/common/errorPage.jsp";
 
     public static final String MODERATOR_MENU = "WEB-INF/view/moderator/moderator_menu.jsp";
     public static final String MODERATOR_MENU_COMMAND = "controller?action=moderatorMenu";
-    public static final String USER_MENU = "WEB-INF/view/user/user_menu.jsp";
     public static final String CREATE_EVENT = "WEB-INF/view/moderator/createEvent.jsp";
     public static final String EVENT_INFO = "WEB-INF/view/moderator/eventInfo.jsp";
     public static final String EVENT_INFO_COMMAND = "controller?action=infoEvent";
@@ -38,6 +37,12 @@ public class ViewPath {
     public static final String SPEAKER_SUGGEST_REPORT_PAGE = "WEB-INF/view/speaker/allSuggestionReportPage.jsp";
     public static final String SPEAKER_ALL_SUGGEST_REPORT_COMMAND = "controller?action=allSuggestReports";
 
-
+    public static final String USER_MENU_PAGE = "WEB-INF/view/user/userMenu.jsp";
+    public static final String USER_MENU_COMMAND = "controller?action=userMenu";
+    public static final String USER_EVENT_INFO = "WEB-INF/view/user/userEventInfo.jsp";
+    public static final String USER_EVENT_INFO_COMMAND = "controller?action=speakerEventInfo";
+    public static final String USER_SUBSCRIBES_MENU_PAGE = "WEB-INF/view/user/subscribesEventMenu.jsp";
+    public static final String USER_SUBSCRIBES_MENU_COMMAND = "controller?action=subscribes";
+    public static final String USER_EVENT_STREAM = "WEB-INF/view/user/event.jsp";
 
 }

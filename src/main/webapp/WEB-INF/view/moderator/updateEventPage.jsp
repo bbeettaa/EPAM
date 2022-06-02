@@ -17,14 +17,14 @@
 
 <form method="post" action="">
     <div class="createUser" style="margin-left: 45%">
-        <br/><h2><fmt:message key="title.createNewUser"/></h2>
+        <br/><h2><fmt:message key="title.updateEvent"/></h2>
         <input type="hidden" name="action" value="updateEvent">
         <input type="hidden" name="id" value="${requestScope.event.id}">
-        <label><input type="text" name="nameToSet" value="${requestScope.event.name}" minlength="5" maxlength="30" required>: name </label><label style="color: orange">*</label><br>
-        <label><input type="date" name="dateToSet" value="${requestScope.event.dateBegin}" required>: <fmt:message key="label.password"/> </label><label style="color: orange">*</label><br>
-        <label><input type="time" name="timeToSet" value="${requestScope.event.timeBegin}" >: <fmt:message key="label.email"/> </label<label style="color: orange">*</label>><br>
+        <label><input type="text" name="nameToSet" value="${requestScope.event.name}" minlength="5" maxlength="30" required>: <fmt:message key="label.event.name"/> </label><label style="color: orange">*</label><br>
+        <label><input type="date" name="dateToSet" value="${requestScope.event.dateBegin}" required>: <fmt:message key="label.event.date"/> </label><label style="color: orange">*</label><br>
+        <label><input type="time" name="timeToSet" value="${requestScope.event.timeBegin}" >: <fmt:message key="label.event.time"/> </label><label style="color: orange">*</label><br>
 
-        <input type="submit" value="<fmt:message key="act.createUser"/>" name="Ok"><br>
+        <input type="submit" value="<fmt:message key="label.button.update"/>" name="Ok"><br>
     </div>
 </form>
 

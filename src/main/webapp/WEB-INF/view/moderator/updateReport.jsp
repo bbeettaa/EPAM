@@ -24,28 +24,28 @@
 
 <div class="update">
     <br/>
-    <h2><fmt:message key="title.createNewUser"/></h2>
-    <label style="margin-left: 5%">${reportId}: <fmt:message key="title.eventId"/></label>
+    <h2><fmt:message key="title.updateReport"/></h2>
+    <label style="margin-left: 5%">${requestScope.reportId}: <fmt:message key="label.report.id"/></label>
     <form method="post" action="">
 
         <input type="hidden" name="action" value="updateReport">
-        <input type="hidden" name="id" value="${reportId}"/>
-        <input type="hidden" name="eventId" value="${eventId}"/>
+        <input type="hidden" name="id" value="${requestScope.reportId}"/>
+        <input type="hidden" name="eventId" value="${requestScope.eventId}"/>
         <label><input type="text" name="nameToSet" value="${requestScope.report.name}" minlength="5" maxlength="30"
-                      required>: <fmt:message key="label.name"/> </label><label style="color: orange">*</label><br>
+                      required>: <fmt:message key="label.user.name"/> </label><label style="color: orange">*</label><br>
         <label><input type="text" name="speakerLogin" value="${requestScope.report.speaker.login}" minlength="5"
-                      maxlength="30">: <fmt:message key="label.speaker"/> </label>
-        <c:if test="${message != null}"/>
+                      maxlength="30">: <fmt:message key="label.role.speaker"/> </label>
+        <c:if test="${requestScope.message != null}"/>
         <c:choose>
-            <c:when test="${message == 'non-existent'}">
-                <label style="color: red"><fmt:message key="lable.non_existent_user"/></label>
+            <c:when test="${requestScope.message == 'non-existent'}">
+                <label style="color: red"><fmt:message key="label.speaker.notSpeaker"/></label>
             </c:when>
-            <c:when test="${message == 'not speaker'}">
-                <label style="color: red"><fmt:message key="lable.user is not speaker"/></label>
+            <c:when test="${requestScope.message == 'not speaker'}">
+                <label style="color: red"><fmt:message key="label.speaker.notSpeaker"/></label>
             </c:when>
         </c:choose><br>
 
-        <input type="submit" value="<fmt:message key="act.createUser"/>" name="Ok"><br>
+        <input type="submit" value="<fmt:message key="label.button.update"/>" name="Ok"><br>
 
     </form>
 </div>

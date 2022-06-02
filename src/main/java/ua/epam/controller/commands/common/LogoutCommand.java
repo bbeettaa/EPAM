@@ -14,7 +14,9 @@ public class LogoutCommand implements ICommand {
     public String execute(HttpServletRequest req, HttpServletResponse res) {
         HttpSession session = req.getSession(false);
         if (session != null) {
-            session.invalidate();
+            //session.invalidate();
+            session.removeAttribute("login");
+            session.removeAttribute("password");
         }
         AppContext.LOGGER.debug("Logout finished");
         return ViewPath.LOGIN_MENU;

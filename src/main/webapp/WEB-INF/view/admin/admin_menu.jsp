@@ -32,6 +32,12 @@
             text-decoration: none;
             display: compact;
         }
+        .search{
+            border: 2px solid black;
+        }
+        .search input, .search button, .search label{
+            margin-left: 10px;
+        }
 
         .createUser input, select{
             width: 150px;
@@ -53,25 +59,28 @@
 <body>
 <fmt:message key="title.adminPanel" var="titleName"/>
 <c:set var="title" value="${titleName}" scope="application"/>
-<jsp:include page="/WEB-INF/view/head.jsp"/>
+<jsp:include page="/WEB-INF/view/admin/head.jsp"/>
 
 <div class="sidenav">
-    <form method="post" action="">
-        <input type="hidden" name="action" value="findUser">
-        <div>
-            <label for="findLogin"><fmt:message key="label.searchByLogin"/>:</label>
-            <input type="search" id="findLogin" name="findLogin" value="${findLogin}">
-            <input type="submit" value="<fmt:message key="act.search"/>">
-        </div>
-    </form>
-
-    <br/><h2><fmt:message key="title.createNewUser"/></h2>
-    <form method="post" action="">
-        <div class="createUser" >
-            <input type="hidden" name="action" value="registration">
-            <input type="submit" value="<fmt:message key="act.createUser"/>" name="Ok"><br>
-        </div>
-    </form>
+    <div class="search">
+        <form method="post" action=""><br>
+            <input type="hidden" name="action" value="findUser">
+            <div>
+                <label for="findLogin"><fmt:message key="label.button.searchByLogin"/>:</label>
+                <input type="search" id="findLogin" name="findLogin" value="${findLogin}">
+                <input type="submit" value="<fmt:message key="label.button.search"/>"/>
+            </div>
+        </form><br>
+    </div><br>
+    <div class="search">
+        <form method="post" action=""><br>
+            <div class="createUser" >
+                <label><fmt:message key="title.createNewUser"/>:</label>
+                <input type="hidden" name="action" value="registration">
+                <input type="submit" value="<fmt:message key="label.button.create"/>" name="Ok">
+            </div>
+        </form><br>
+    </div>
 </div>
 
 <div class="columnMiddle">
@@ -79,13 +88,13 @@
     <table>
         <caption style="font-size:160%;"> <fmt:message key="title.allUsers"/> </caption>
         <tr>
-            <th><fmt:message key="label.id"/></th>
-            <th><fmt:message key="label.login"/></th>
-            <th><fmt:message key="label.password"/></th>
-            <th><fmt:message key="label.name"/></th>
-            <th><fmt:message key="label.surname"/></th>
-            <th><fmt:message key="label.email"/></th>
-            <th><fmt:message key="label.role"/></th>
+            <th><fmt:message key="label.user.id"/></th>
+            <th><fmt:message key="label.user.login"/></th>
+            <th><fmt:message key="label.user.password"/></th>
+            <th><fmt:message key="label.user.name"/></th>
+            <th><fmt:message key="label.user.surname"/></th>
+            <th><fmt:message key="label.user.email"/></th>
+            <th><fmt:message key="label.user.role"/></th>
         </tr>
         <c:forEach var="user" items="${requestScope.dao}">
             <tr>
@@ -105,7 +114,7 @@
 
                             <c:choose>
                                 <c:when test="${user.role != 'ADMIN'}">
-                                    <input type="submit" name="delete" value="<fmt:message key="act.delete"/>"/>
+                                    <input type="submit" name="delete" value="<fmt:message key="label.button.delete"/>"/>
                                 </c:when>
                             </c:choose>
                         </form>
@@ -114,7 +123,7 @@
                         <form method="post" action="" id="update">
                             <input type="hidden" name="action" value="updateUserPage">
                             <input type="hidden"  name="id" value="${user.id}"/>
-                            <input type="submit" value="<fmt:message key="act.update"/>"/>
+                            <input type="submit" value="<fmt:message key="label.button.updateInfo"/>"/>
                         </form>
                     </td>
                 </ul>

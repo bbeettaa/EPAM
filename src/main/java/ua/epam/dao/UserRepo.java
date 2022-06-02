@@ -5,6 +5,7 @@ import ua.epam.models.entities.user.IUser;
 import ua.epam.models.entities.user.User;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static java.util.Objects.nonNull;
 
@@ -37,10 +38,7 @@ public class UserRepo {
     }
 
     public IUser getByEmail(String email){
-        for (IUser u:dao.findAll())
-            if(nonNull(u.getEmail()) && u.getEmail().equals(email))
-                return u;
-        return null;
+        return dao.findAll().stream().filter(u -> nonNull(u.getEmail()) && u.getEmail().equals(email)).findFirst().orElse(null);
     }
 
     public boolean update(IUser user) {

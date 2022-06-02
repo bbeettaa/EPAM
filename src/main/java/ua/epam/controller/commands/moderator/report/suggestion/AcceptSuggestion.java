@@ -23,16 +23,14 @@ public class AcceptSuggestion implements ICommand {
             req.setCharacterEncoding("UTF-8");
 
             final int evId = Integer.parseInt(req.getParameter("id"));
-            IReport entity = new Report();
-
+            IReport entity ;
             entity = SuggestReportPool.getEntity().getSuggestion().stream().filter(e->e.getEventId()==evId).findFirst().orElse(null);
 
             SuggestReportPool.getEntity().getSuggestion().remove(entity);
             AppContext.REPORTS_REPO.get().add(entity);
             req.setAttribute("id", evId);
 
-            req.setAttribute("dao", AppContext.EVENT_REPO.get().get());
-            response = ViewPath.MODERATOR_MENU_COMMAND;
+            response = ViewPath.MODERATOR_SUGGEST_REPORTS_COMMAND;
 
         } catch (IOException e) {
             AppContext.LOGGER.error(e.getMessage());

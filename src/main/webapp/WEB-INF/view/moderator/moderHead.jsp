@@ -23,6 +23,7 @@
             background-color: gray;
             padding: 10px;
             width: 101%;
+            height: 96px;
             font-size: 30px;
             /*  text-align: right;*/
             position: relative;
@@ -71,37 +72,37 @@
 </head>
 <body>
 
-
-
 <div class="header">
-    <label style="margin-left: 45%">${title}</label>
+
+    <label style="margin-left: 42%"><fmt:message key="title.moderPanel"/></label>
+
+    <label style="margin-left: 45%">${pageScope.title}</label>
     <!-- logout -->
     <form method="post" action="" style="margin-left: 94.3%; margin-top: -40px">
         <input type="hidden" name="action" value="logout" >
-        <button type="submit" ><fmt:message key="act.logout"/></button>
+        <button type="submit"><fmt:message key="label.button.logout"/></button>
     </form>
     <!-- choose language -->
-    <form action=""  style="margin-left: 82%">
-        <label style="font-size: 20px; margin-right: 0"><fmt:message key="label.selectLanguage"/>:</label>
+
+    <form action="" method="post" style="text-align: right">
+        <label style="font-size: 20px; margin-right: 0"><fmt:message key="label.button.selectLanguage"/>:</label>
         <select id="language" name="language" onchange="submit()">
             <option value="en_EN" ${language == 'en_EN' ? 'selected' : ''}>English</option>
-            <option value="ru_RU" ${language == 'ru_RU' ? 'selected' : ''}>Русский</option>
+<%--            <option value="ru_RU" ${language == 'ru_RU' ? 'selected' : ''}>Русский</option>--%>
             <option value="uk" ${language == 'uk' ? 'selected' : ''}>Українська</option>
-            <input type="hidden" name="login" value="${login}">
-            <input type="hidden" name="password" value="${password}">
         </select>
     </form>
 
     <form method="post" action="">
         <input type="hidden" name="action" value="moderatorMenu"/>
         <ul class="nav" style="margin-top: -70px">
-            <li><input type="submit"  value="<fmt:message key="label.Main"/>"></li>
+            <li><input type="submit"  value="<fmt:message key="label.button.toMain"/>"></li>
         </ul>
     </form>
     <form style="margin-left: 150px" method="post" action="">
         <input type="hidden" name="action" value="moderatorAllSuggestReports"/>
-        <ul class="nav" style="margin-top: -67px">
-            <li><input type="submit" value="<fmt:message key="label.Main"/>"></li>
+        <ul class="nav" style="margin-top: -67px;">
+            <li><input style="width: 150px" type="submit" value="<fmt:message key="label.button.allSuggestReports"/>"></li>
         </ul>
     </form>
 

@@ -5,6 +5,7 @@ import ua.epam.models.entities.report.IReport;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import static java.util.Objects.isNull;
 
@@ -32,5 +33,9 @@ public class SuggestReportPool {
                 returnList.add(report);
 
     return returnList;
+    }
+
+    public void deleteByName(String name){
+        reports.removeIf(e->e.getName().equals(name));
     }
 }
