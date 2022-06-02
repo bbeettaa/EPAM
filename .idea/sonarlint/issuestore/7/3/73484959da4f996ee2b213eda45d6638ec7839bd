@@ -1,0 +1,9 @@
+
+c
+java:S1192#"HDefine a constant instead of duplicating this literal "eventId" 4 times.(‚²í×ÿÿÿÿÿ
+e
+java:S1192"JDefine a constant instead of duplicating this literal "eventName" 3 times.(ã¤šøÿÿÿÿ
+M
+java:S1128"0Remove this unused import 'ua.epam.models.Role'.(ˆ…ğñ8ñğ¼ş‘0
+C
+java:S1144?"-Remove this unused private "setError" method.(–ø¡û

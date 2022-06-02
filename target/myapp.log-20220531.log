@@ -1,0 +1,112 @@
+2022-05-31 16:37:05,729 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-31 16:52:44,881 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-31 17:08:15,567 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-31 17:49:34,586 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-31 17:50:01,414 [http-nio-8080-exec-2] ERROR (DaoUserService.java:26) - Cannot invoke "ua.epam.models.entities.user.IUser.getLogin()" because "entity" is null
+  2022-05-31 17:50:01,426 [http-nio-8080-exec-2] ERROR (DaoUserService.java:108) - Cannot invoke "ua.epam.models.entities.user.IUser.getLogin()" because "entity" is null
+  2022-05-31 17:50:06,883 [http-nio-8080-exec-3] ERROR (DaoUserService.java:26) - Cannot invoke "ua.epam.models.entities.user.IUser.getLogin()" because "entity" is null
+  2022-05-31 17:50:06,891 [http-nio-8080-exec-3] ERROR (DaoUserService.java:108) - Cannot invoke "ua.epam.models.entities.user.IUser.getLogin()" because "entity" is null
+  2022-05-31 17:50:12,988 [http-nio-8080-exec-4] ERROR (DaoUserService.java:26) - Cannot invoke "ua.epam.models.entities.user.IUser.getLogin()" because "entity" is null
+  2022-05-31 17:50:12,993 [http-nio-8080-exec-4] ERROR (DaoUserService.java:108) - Cannot invoke "ua.epam.models.entities.user.IUser.getLogin()" because "entity" is null
+  2022-05-31 17:50:17,774 [http-nio-8080-exec-5] ERROR (DaoUserService.java:26) - Cannot invoke "ua.epam.models.entities.user.IUser.getLogin()" because "entity" is null
+  2022-05-31 17:50:17,781 [http-nio-8080-exec-5] ERROR (DaoUserService.java:108) - Cannot invoke "ua.epam.models.entities.user.IUser.getLogin()" because "entity" is null
+  2022-05-31 17:50:21,907 [http-nio-8080-exec-6] ERROR (DaoUserService.java:26) - Cannot invoke "ua.epam.models.entities.user.IUser.getLogin()" because "entity" is null
+  2022-05-31 17:50:21,915 [http-nio-8080-exec-6] ERROR (DaoUserService.java:108) - Cannot invoke "ua.epam.models.entities.user.IUser.getLogin()" because "entity" is null
+  2022-05-31 17:50:59,652 [http-nio-8080-exec-1] ERROR (DaoUserService.java:26) - Cannot invoke "ua.epam.models.entities.user.IUser.getLogin()" because "entity" is null
+  2022-05-31 17:50:59,660 [http-nio-8080-exec-1] ERROR (DaoUserService.java:108) - Cannot invoke "ua.epam.models.entities.user.IUser.getLogin()" because "entity" is null
+  2022-05-31 17:51:00,878 [http-nio-8080-exec-2] ERROR (DaoUserService.java:26) - Cannot invoke "ua.epam.models.entities.user.IUser.getLogin()" because "entity" is null
+  2022-05-31 17:51:00,884 [http-nio-8080-exec-2] ERROR (DaoUserService.java:108) - Cannot invoke "ua.epam.models.entities.user.IUser.getLogin()" because "entity" is null
+  2022-05-31 17:51:02,227 [http-nio-8080-exec-3] ERROR (DaoUserService.java:26) - Cannot invoke "ua.epam.models.entities.user.IUser.getLogin()" because "entity" is null
+  2022-05-31 17:51:02,234 [http-nio-8080-exec-3] ERROR (DaoUserService.java:108) - Cannot invoke "ua.epam.models.entities.user.IUser.getLogin()" because "entity" is null
+  2022-05-31 17:51:02,602 [http-nio-8080-exec-4] ERROR (DaoUserService.java:26) - Cannot invoke "ua.epam.models.entities.user.IUser.getLogin()" because "entity" is null
+  2022-05-31 17:51:02,611 [http-nio-8080-exec-4] ERROR (DaoUserService.java:108) - Cannot invoke "ua.epam.models.entities.user.IUser.getLogin()" because "entity" is null
+  2022-05-31 17:52:15,771 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-31 18:05:46,655 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-31 18:09:41,048 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-31 18:10:04,055 [http-nio-8080-exec-5] ERROR (UpdateUserCommand.java:77) - Cannot invoke "String.equals(Object)" because the return value of "ua.epam.models.entities.user.IUser.getEmail()" is null
+  2022-05-31 18:10:50,651 [http-nio-8080-exec-6] ERROR (UpdateUserCommand.java:77) - Cannot invoke "String.equals(Object)" because the return value of "ua.epam.models.entities.user.IUser.getEmail()" is null
+  2022-05-31 18:11:43,541 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-31 18:11:57,088 [http-nio-8080-exec-5] ERROR (DaoUserService.java:108) - cannot create new user because user with current login is exist
+  2022-05-31 18:12:07,278 [http-nio-8080-exec-9] ERROR (DaoUserService.java:108) - cannot create new user because user with current login is exist
+  2022-05-31 18:12:13,506 [http-nio-8080-exec-10] ERROR (DaoUserService.java:108) - cannot create new user because user with current login is exist
+  2022-05-31 18:13:45,484 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-31 18:14:31,556 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-31 18:16:36,697 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-31 18:16:52,934 [http-nio-8080-exec-4] ERROR (DaoUserService.java:108) - cannot create new user because user with current login is exist
+  2022-05-31 18:17:09,544 [http-nio-8080-exec-7] ERROR (DaoUserService.java:108) - cannot create new user because user with current login is exist
+  2022-05-31 18:18:28,115 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-31 18:21:08,508 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-31 18:23:41,466 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-31 18:25:44,206 [http-nio-8080-exec-7] ERROR (AuthFilter.java:72) - Index 0 out of bounds for length 0
+  2022-05-31 18:25:53,058 [http-nio-8080-exec-8] ERROR (AuthFilter.java:72) - Index 0 out of bounds for length 0
+  2022-05-31 18:26:01,315 [http-nio-8080-exec-9] ERROR (AuthFilter.java:72) - Index 0 out of bounds for length 0
+  2022-05-31 18:26:16,670 [http-nio-8080-exec-1] ERROR (AuthFilter.java:72) - Index 0 out of bounds for length 0
+  2022-05-31 18:27:40,494 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-31 18:27:47,984 [http-nio-8080-exec-1] ERROR (AuthFilter.java:72) - Index 0 out of bounds for length 0
+  2022-05-31 18:27:47,985 [http-nio-8080-exec-1] INFO  (AuthFilter.java:73) - [Ljava.lang.StackTraceElement;@7d2219b4
+  2022-05-31 18:28:18,148 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-31 18:28:18,782 [http-nio-8080-exec-1] ERROR (AuthFilter.java:73) - Index 0 out of bounds for length 0
+  2022-05-31 18:28:18,783 [http-nio-8080-exec-1] INFO  (AuthFilter.java:74) - [java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64), java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70), java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:266), java.base/java.util.Objects.checkIndex(Objects.java:359), java.base/java.util.ArrayList.get(ArrayList.java:427), ua.epam.controller.commands.common.RegistrationCommand.execute(RegistrationCommand.java:28), ua.epam.controller.controller.Controller.processRequest(Controller.java:44), ua.epam.controller.controller.Controller.doPost(Controller.java:33), javax.servlet.http.HttpServlet.service(HttpServlet.java:681), javax.servlet.http.HttpServlet.service(HttpServlet.java:764), org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227), org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162), org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53), org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189), org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162), ua.epam.controller.filter.AuthFilter.doFilter(AuthFilter.java:70), org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189), org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162), ua.epam.controller.filter.EncodingFilter.doFilter(EncodingFilter.java:35), org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189), org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162), org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197), org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97), org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541), org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135), org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92), org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:687), org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78), org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360), org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399), org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65), org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890), org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743), org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49), org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191), org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659), org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61), java.base/java.lang.Thread.run(Thread.java:833)]
+  2022-05-31 18:30:43,010 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-31 18:30:47,062 [http-nio-8080-exec-1] ERROR (AuthFilter.java:73) - Index 0 out of bounds for length 0
+  2022-05-31 18:32:14,246 [http-nio-8080-exec-2] ERROR (AuthFilter.java:73) - Index 0 out of bounds for length 0
+  2022-05-31 18:33:56,212 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-31 18:34:05,267 [http-nio-8080-exec-1] ERROR (AuthFilter.java:73) - Index 0 out of bounds for length 0
+  2022-05-31 18:39:16,470 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-31 18:40:48,215 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-31 18:42:17,883 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-31 18:43:12,134 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-31 18:46:44,516 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-31 18:47:07,109 [http-nio-8080-exec-4] ERROR (UpdateUserCommand.java:79) - Index 1 out of bounds for length 1
+  2022-05-31 18:47:30,504 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-31 18:48:32,621 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-31 18:51:40,744 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-31 18:51:47,784 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-31 19:04:35,061 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-31 19:06:01,716 [http-nio-8080-exec-5] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-05-31 19:08:30,153 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-31 19:08:59,407 [http-nio-8080-exec-6] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-05-31 19:11:04,495 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-31 19:11:39,382 [http-nio-8080-exec-9] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-05-31 19:11:55,934 [http-nio-8080-exec-4] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-05-31 19:12:50,150 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-31 19:13:08,418 [http-nio-8080-exec-1] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-05-31 19:13:46,391 [http-nio-8080-exec-3] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-05-31 19:14:17,605 [http-nio-8080-exec-5] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-05-31 19:15:17,155 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-31 19:16:51,469 [http-nio-8080-exec-4] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-05-31 19:17:45,878 [http-nio-8080-exec-7] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-05-31 19:19:16,039 [http-nio-8080-exec-3] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-05-31 19:19:54,016 [http-nio-8080-exec-7] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-05-31 19:24:04,984 [http-nio-8080-exec-1] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-05-31 19:37:46,136 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-31 19:39:42,719 [http-nio-8080-exec-2] ERROR (Controller.java:35) - org.apache.jasper.JasperException: javax.el.ELException: Failed to parse the expression [${()requestScope.role=='SPEAKER')?'selected':''}]
+  2022-05-31 19:44:34,435 [http-nio-8080-exec-3] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-05-31 19:44:49,616 [http-nio-8080-exec-6] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-05-31 19:46:26,298 [http-nio-8080-exec-8] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-05-31 19:47:02,948 [http-nio-8080-exec-7] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-05-31 19:47:25,241 [http-nio-8080-exec-3] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-05-31 21:06:02,922 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-31 21:06:17,529 [http-nio-8080-exec-4] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-05-31 21:06:34,635 [http-nio-8080-exec-8] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-05-31 21:25:02,898 [http-nio-8080-exec-2] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-05-31 21:35:27,804 [http-nio-8080-exec-8] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-05-31 21:35:47,596 [http-nio-8080-exec-4] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-05-31 21:35:57,081 [http-nio-8080-exec-6] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-05-31 21:36:42,574 [http-nio-8080-exec-2] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-05-31 22:17:39,270 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-31 22:17:58,199 [http-nio-8080-exec-3] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-05-31 22:18:55,161 [http-nio-8080-exec-9] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-05-31 22:20:56,585 [http-nio-8080-exec-8] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-05-31 22:21:27,703 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-31 22:33:42,666 [http-nio-8080-exec-2] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-05-31 22:34:05,097 [http-nio-8080-exec-6] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-05-31 22:35:35,940 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-31 22:36:44,149 [http-nio-8080-exec-7] ERROR (AuthFilter.java:73) - Cannot invoke "ua.epam.controller.commands.ICommand.execute(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)" because "ic" is null
+  2022-05-31 22:59:11,628 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-31 22:59:17,568 [http-nio-8080-exec-2] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-05-31 22:59:45,517 [http-nio-8080-exec-5] ERROR (AuthFilter.java:73) - Cannot invoke "ua.epam.controller.commands.ICommand.execute(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)" because "ic" is null
+  2022-05-31 23:00:52,207 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-31 23:04:41,233 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-05-31 23:09:08,551 [main] INFO  (ContextListener.java:24) - Context listener start working
+  

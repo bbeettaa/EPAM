@@ -1,0 +1,8 @@
+
+V	java:S125"<This block of commented-out lines of code should be removed.(×¤ó¢şÿÿÿÿ
+\
+java:S1128"ARemove this unused import 'ua.epam.models.entities.event.IEvent'.(—¹«–şÿÿÿÿ
+U
+java:S1128"?Remove this unused import 'ua.epam.utils.builder.EventBuilder'.(–ÖöÚ
+[
+java:S1128	"@Remove this unused import 'ua.epam.utils.builder.ReportBuilder'.(ıÁğ‰ÿÿÿÿÿ

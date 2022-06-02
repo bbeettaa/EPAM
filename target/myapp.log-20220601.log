@@ -1,0 +1,324 @@
+2022-06-01 00:03:29,703 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 00:03:55,328 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 00:04:34,475 [http-nio-8080-exec-3] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-06-01 00:04:43,934 [http-nio-8080-exec-5] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-06-01 00:33:51,792 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 00:34:02,392 [http-nio-8080-exec-3] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-06-01 00:35:25,919 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 01:38:23,779 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 01:52:55,485 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 01:53:43,705 [http-nio-8080-exec-10] ERROR (AuthFilter.java:73) - Cannot invoke "ua.epam.controller.commands.ICommand.execute(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)" because "ic" is null
+  2022-06-01 01:56:22,464 [http-nio-8080-exec-9] ERROR (AuthFilter.java:73) - Cannot invoke "ua.epam.controller.commands.ICommand.execute(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)" because "ic" is null
+  2022-06-01 01:56:22,472 [http-nio-8080-exec-10] ERROR (AuthFilter.java:73) - Cannot invoke "ua.epam.controller.commands.ICommand.execute(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)" because "ic" is null
+  2022-06-01 01:56:22,533 [http-nio-8080-exec-3] ERROR (DaoUserService.java:26) - Cannot invoke "java.sql.Connection.commit()" because "this.connection" is null
+  2022-06-01 01:56:22,534 [http-nio-8080-exec-3] ERROR (AuthFilter.java:73) - Cannot invoke "java.sql.Connection.setAutoCommit(boolean)" because "this.connection" is null
+  2022-06-01 01:57:32,875 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 01:58:49,510 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 01:59:14,887 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 02:01:58,339 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 02:08:26,125 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 02:08:54,002 [http-nio-8080-exec-4] ERROR (AuthFilter.java:73) - Cannot invoke "ua.epam.controller.commands.ICommand.execute(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)" because "ic" is null
+  2022-06-01 02:09:43,388 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 02:09:58,603 [http-nio-8080-exec-4] ERROR (AuthFilter.java:73) - Cannot invoke "ua.epam.controller.commands.ICommand.execute(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)" because "ic" is null
+  2022-06-01 02:10:49,403 [http-nio-8080-exec-6] ERROR (AuthFilter.java:73) - Cannot invoke "ua.epam.controller.commands.ICommand.execute(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)" because "ic" is null
+  2022-06-01 02:11:03,393 [http-nio-8080-exec-7] ERROR (AuthFilter.java:73) - Cannot invoke "ua.epam.controller.commands.ICommand.execute(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)" because "ic" is null
+  2022-06-01 02:11:31,673 [http-nio-8080-exec-8] ERROR (AuthFilter.java:73) - Cannot invoke "ua.epam.controller.commands.ICommand.execute(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)" because "ic" is null
+  2022-06-01 02:11:55,139 [http-nio-8080-exec-9] ERROR (AuthFilter.java:73) - Cannot invoke "ua.epam.controller.commands.ICommand.execute(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)" because "ic" is null
+  2022-06-01 02:12:05,974 [http-nio-8080-exec-2] ERROR (UserBuilder.java:32) - Cannot invoke "String.toUpperCase()" because the return value of "javax.servlet.http.HttpServletRequest.getParameter(String)" is null
+  2022-06-01 02:12:05,975 [http-nio-8080-exec-2] ERROR (UserValidator.java:28) - Cannot invoke "Object.getClass()" because "object" is null
+  2022-06-01 02:12:29,022 [http-nio-8080-exec-3] ERROR (UserBuilder.java:32) - Cannot invoke "String.toUpperCase()" because the return value of "javax.servlet.http.HttpServletRequest.getParameter(String)" is null
+  2022-06-01 02:12:29,681 [http-nio-8080-exec-3] ERROR (UserValidator.java:28) - Cannot invoke "Object.getClass()" because "object" is null
+  2022-06-01 02:13:20,507 [http-nio-8080-exec-5] ERROR (UserBuilder.java:32) - Cannot invoke "String.toUpperCase()" because the return value of "javax.servlet.http.HttpServletRequest.getParameter(String)" is null
+  2022-06-01 02:13:20,888 [http-nio-8080-exec-5] ERROR (UserValidator.java:28) - Cannot invoke "Object.getClass()" because "object" is null
+  2022-06-01 02:13:38,825 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 02:14:35,832 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 02:14:59,401 [http-nio-8080-exec-2] ERROR (AuthFilter.java:73) - For input string: ""
+  2022-06-01 02:15:48,944 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 02:16:30,749 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 02:16:49,532 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 02:20:32,600 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 02:21:33,806 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 02:22:13,755 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 02:22:34,290 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 02:25:10,702 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 02:26:26,034 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 02:27:14,254 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 02:27:33,663 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 02:28:13,216 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 02:28:49,735 [http-nio-8080-exec-3] ERROR (AuthFilter.java:73) - Cannot invoke "ua.epam.controller.commands.ICommand.execute(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)" because "ic" is null
+  2022-06-01 02:43:06,346 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 02:44:04,407 [http-nio-8080-exec-2] ERROR (AuthFilter.java:73) - Cannot invoke "ua.epam.controller.commands.ICommand.execute(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)" because "ic" is null
+  2022-06-01 02:44:48,186 [http-nio-8080-exec-6] ERROR (AuthFilter.java:73) - Cannot invoke "ua.epam.controller.commands.ICommand.execute(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)" because "ic" is null
+  2022-06-01 02:44:52,191 [http-nio-8080-exec-7] ERROR (AuthFilter.java:73) - Cannot invoke "ua.epam.controller.commands.ICommand.execute(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)" because "ic" is null
+  2022-06-01 02:47:04,503 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 02:49:09,956 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 02:56:07,465 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 03:03:05,919 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 03:07:42,120 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 03:15:02,454 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 03:17:18,051 [http-nio-8080-exec-6] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-06-01 03:17:42,253 [http-nio-8080-exec-10] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-06-01 12:15:02,778 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 12:15:34,978 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 12:15:48,905 [http-nio-8080-exec-2] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-06-01 12:16:11,183 [http-nio-8080-exec-5] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-06-01 12:40:28,783 [http-nio-8080-exec-2] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-06-01 12:42:18,418 [http-nio-8080-exec-9] ERROR (Controller.java:26) - <h3>Validation error messages from TagLibraryValidator for [c] in [/WEB-INF/view/common/registrationUser.jsp]</h3><p>46: Illegal text inside "c:choose" tag: "<input ...".</p>
+  2022-06-01 12:42:33,225 [http-nio-8080-exec-2] ERROR (Controller.java:35) - <h3>Validation error messages from TagLibraryValidator for [c] in [/WEB-INF/view/common/registrationUser.jsp]</h3><p>46: Illegal text inside "c:choose" tag: "<input ...".</p>
+  2022-06-01 12:43:14,310 [http-nio-8080-exec-4] ERROR (Controller.java:35) - <h3>Validation error messages from TagLibraryValidator for [c] in [/WEB-INF/view/common/registrationUser.jsp]</h3><p>46: Illegal text inside "c:choose" tag: "<input ...".</p>
+  2022-06-01 12:43:19,457 [http-nio-8080-exec-6] ERROR (Controller.java:35) - <h3>Validation error messages from TagLibraryValidator for [c] in [/WEB-INF/view/common/registrationUser.jsp]</h3><p>46: Illegal text inside "c:choose" tag: "<input ...".</p>
+  2022-06-01 12:46:04,019 [http-nio-8080-exec-6] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-06-01 12:49:17,347 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 12:53:32,979 [http-nio-8080-exec-10] ERROR (AuthFilter.java:73) - Cannot invoke "ua.epam.controller.commands.ICommand.execute(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)" because "ic" is null
+  2022-06-01 12:53:58,636 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 13:09:11,603 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 13:10:52,329 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 13:11:09,997 [http-nio-8080-exec-5] ERROR (AuthFilter.java:73) - For input string: ""
+  2022-06-01 13:12:42,019 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 13:14:20,727 [http-nio-8080-exec-8] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-06-01 13:14:33,241 [http-nio-8080-exec-2] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-06-01 13:15:11,371 [http-nio-8080-exec-9] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-06-01 13:17:01,791 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 13:19:26,216 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 13:19:43,222 [http-nio-8080-exec-5] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-06-01 13:21:53,397 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 13:22:29,040 [http-nio-8080-exec-4] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-06-01 13:24:05,893 [http-nio-8080-exec-9] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-06-01 13:33:57,096 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 13:36:43,703 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 13:39:52,944 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 13:43:47,618 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 13:45:45,669 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 14:00:33,227 [http-nio-8080-exec-8] ERROR (AuthFilter.java:73) - Cannot parse null string
+  2022-06-01 14:01:00,742 [http-nio-8080-exec-10] ERROR (AuthFilter.java:73) - Cannot parse null string
+  2022-06-01 14:01:54,085 [http-nio-8080-exec-3] ERROR (AuthFilter.java:73) - For input string: ""
+  2022-06-01 14:01:59,275 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 14:02:13,596 [http-nio-8080-exec-4] ERROR (AuthFilter.java:73) - For input string: ""
+  2022-06-01 14:03:50,830 [http-nio-8080-exec-6] ERROR (AuthFilter.java:73) - Cannot invoke "ua.epam.controller.commands.ICommand.execute(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)" because "ic" is null
+  2022-06-01 14:04:10,962 [http-nio-8080-exec-2] ERROR (AuthFilter.java:73) - For input string: ""
+  2022-06-01 14:12:27,959 [http-nio-8080-exec-7] ERROR (AuthFilter.java:73) - For input string: ""
+  2022-06-01 14:12:51,015 [http-nio-8080-exec-2] ERROR (AuthFilter.java:73) - For input string: ""
+  2022-06-01 14:13:53,418 [http-nio-8080-exec-3] ERROR (AuthFilter.java:73) - For input string: ""
+  2022-06-01 14:14:03,182 [http-nio-8080-exec-10] ERROR (AuthFilter.java:73) - Cannot invoke "java.lang.CharSequence.toString()" because "s" is null
+  2022-06-01 14:14:11,820 [http-nio-8080-exec-8] ERROR (AuthFilter.java:73) - Cannot invoke "java.lang.CharSequence.toString()" because "s" is null
+  2022-06-01 14:14:20,369 [http-nio-8080-exec-7] ERROR (AuthFilter.java:73) - Cannot invoke "java.lang.CharSequence.toString()" because "s" is null
+  2022-06-01 14:14:27,819 [http-nio-8080-exec-1] ERROR (AuthFilter.java:73) - Cannot invoke "java.lang.CharSequence.toString()" because "s" is null
+  2022-06-01 14:17:24,373 [http-nio-8080-exec-6] ERROR (AuthFilter.java:73) - For input string: ""
+  2022-06-01 14:18:59,686 [http-nio-8080-exec-3] ERROR (AuthFilter.java:73) - For input string: ""
+  2022-06-01 14:19:06,566 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 14:19:15,817 [http-nio-8080-exec-4] ERROR (AuthFilter.java:73) - For input string: ""
+  2022-06-01 14:19:30,994 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 14:19:58,827 [http-nio-8080-exec-3] ERROR (AuthFilter.java:73) - Cannot invoke "ua.epam.controller.commands.ICommand.execute(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)" because "ic" is null
+  2022-06-01 14:21:12,506 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 14:21:26,546 [http-nio-8080-exec-3] ERROR (AuthFilter.java:73) - For input string: ""
+  2022-06-01 14:22:28,692 [http-nio-8080-exec-6] ERROR (AuthFilter.java:73) - For input string: ""
+  2022-06-01 14:24:11,038 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 14:25:51,795 [http-nio-8080-exec-5] ERROR (AuthFilter.java:73) - For input string: ""
+  2022-06-01 14:27:10,874 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 14:28:25,996 [http-nio-8080-exec-1] ERROR (AuthFilter.java:73) - Cannot parse null string
+  2022-06-01 14:29:28,235 [http-nio-8080-exec-4] ERROR (AuthFilter.java:73) - Cannot parse null string
+  2022-06-01 14:30:07,076 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 14:30:14,753 [http-nio-8080-exec-2] ERROR (Controller.java:35) - javax.el.PropertyNotFoundException: Свойство [reportId] не найдено в типе [ua.epam.models.entities.event.Event]
+  2022-06-01 14:30:22,019 [http-nio-8080-exec-3] ERROR (Controller.java:35) - javax.el.PropertyNotFoundException: Свойство [reportId] не найдено в типе [ua.epam.models.entities.event.Event]
+  2022-06-01 14:30:27,729 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 14:30:31,471 [http-nio-8080-exec-3] ERROR (Controller.java:35) - javax.el.PropertyNotFoundException: Свойство [reportId] не найдено в типе [ua.epam.models.entities.event.Event]
+  2022-06-01 14:30:52,847 [http-nio-8080-exec-5] ERROR (AuthFilter.java:73) - Cannot invoke "ua.epam.controller.commands.ICommand.execute(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)" because "ic" is null
+  2022-06-01 14:31:18,246 [http-nio-8080-exec-8] ERROR (AuthFilter.java:73) - Cannot invoke "ua.epam.controller.commands.ICommand.execute(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)" because "ic" is null
+  2022-06-01 14:31:23,218 [http-nio-8080-exec-9] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-06-01 14:31:28,097 [http-nio-8080-exec-1] ERROR (AuthFilter.java:73) - Cannot invoke "ua.epam.controller.commands.ICommand.execute(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)" because "ic" is null
+  2022-06-01 14:36:26,032 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 14:37:56,391 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 14:42:45,094 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 14:55:12,821 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 15:10:09,368 [http-nio-8080-exec-10] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-06-01 15:19:24,142 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 15:22:24,022 [http-nio-8080-exec-5] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-06-01 15:33:32,552 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 15:36:41,934 [http-nio-8080-exec-8] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-06-01 16:33:40,118 [http-nio-8080-exec-5] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-06-01 16:35:09,198 [http-nio-8080-exec-1] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-06-01 16:48:08,593 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 16:54:35,499 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 16:54:50,258 [http-nio-8080-exec-3] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-06-01 17:17:08,867 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 17:17:37,236 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 17:22:46,887 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 17:31:35,507 [http-nio-8080-exec-1] DEBUG (LogoutCommand.java:19) - Logout finished
+  2022-06-01 17:32:41,363 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 17:32:48,711 [http-nio-8080-exec-3] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-01 17:32:57,292 [http-nio-8080-exec-6] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-01 17:39:42,636 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 17:41:35,747 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 17:43:24,622 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 17:43:55,749 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 17:45:00,378 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 17:46:30,384 [http-nio-8080-exec-2] ERROR (AuthFilter.java:73) - Cannot invoke "java.lang.CharSequence.toString()" because "s" is null
+  2022-06-01 17:46:44,093 [http-nio-8080-exec-3] ERROR (AuthFilter.java:73) - Cannot invoke "java.lang.CharSequence.toString()" because "s" is null
+  2022-06-01 17:58:09,471 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 18:00:06,729 [http-nio-8080-exec-6] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-01 18:04:30,239 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 18:06:33,996 [http-nio-8080-exec-10] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-01 18:06:54,884 [http-nio-8080-exec-6] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-01 18:08:13,968 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 18:09:40,962 [http-nio-8080-exec-9] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-01 18:11:16,683 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 18:11:29,403 [http-nio-8080-exec-5] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-01 18:11:47,151 [http-nio-8080-exec-8] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-01 18:13:46,840 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 18:16:33,591 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 18:19:29,410 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 18:23:08,229 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 18:28:59,118 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 18:30:54,875 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 18:32:21,342 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 18:33:38,588 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 18:34:30,429 [http-nio-8080-exec-3] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-01 18:34:45,149 [http-nio-8080-exec-9] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-01 18:36:16,264 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 18:36:39,007 [http-nio-8080-exec-5] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-01 18:37:07,648 [http-nio-8080-exec-3] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-01 18:37:58,211 [http-nio-8080-exec-1] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-01 19:05:21,184 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 19:11:06,806 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 19:11:54,629 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 19:12:16,431 [http-nio-8080-exec-4] ERROR (AuthFilter.java:73) - Cannot parse null string
+  2022-06-01 19:12:51,919 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 19:13:09,001 [http-nio-8080-exec-5] ERROR (AuthFilter.java:73) - For input string: ""
+  2022-06-01 19:20:07,792 [http-nio-8080-exec-5] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-01 19:20:14,848 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 19:27:58,841 [http-nio-8080-exec-1] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-01 19:28:16,354 [http-nio-8080-exec-10] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-01 19:33:40,758 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 19:34:00,299 [http-nio-8080-exec-3] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-01 19:39:03,286 [http-nio-8080-exec-2] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-01 19:39:15,747 [http-nio-8080-exec-6] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-01 19:39:25,382 [http-nio-8080-exec-10] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-01 19:48:40,175 [http-nio-8080-exec-4] ERROR (Controller.java:35) - Произошла ошибка при обработке [/WEB-INF/view/user/subscribesEventMenu.jsp] в строке [141]
+
+138: 
+139:                         </form>
+140:                     </td>
+141:                     <c:when test="${requestScope.started.isActive(entity.id) == true}">
+142:                         <td>
+143:                             <form method="post" action="" id="connect">
+144:                                 <input type="hidden" name="action" value="connect">
+
+
+Stacktrace:
+  2022-06-01 19:48:46,823 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 19:48:55,996 [http-nio-8080-exec-2] ERROR (Controller.java:35) - Произошла ошибка при обработке [WEB-INF/view/user/subscribesEventMenu.jsp] в строке [141]
+
+138: 
+139:                         </form>
+140:                     </td>
+141:                     <c:when test="${requestScope.started.isActive(entity.id) == true}">
+142:                         <td>
+143:                             <form method="post" action="" id="connect">
+144:                                 <input type="hidden" name="action" value="connect">
+
+
+Stacktrace:
+  2022-06-01 19:49:03,843 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 19:49:10,162 [http-nio-8080-exec-3] ERROR (Controller.java:35) - Произошла ошибка при обработке [WEB-INF/view/user/subscribesEventMenu.jsp] в строке [141]
+
+138: 
+139:                         </form>
+140:                     </td>
+141:                     <c:when test="${requestScope.started.isActive(entity.id) == true}">
+142:                         <td>
+143:                             <form method="post" action="" id="connect">
+144:                                 <input type="hidden" name="action" value="connect">
+
+
+Stacktrace:
+  2022-06-01 19:50:09,844 [http-nio-8080-exec-6] ERROR (Controller.java:35) - Произошла ошибка при обработке [WEB-INF/view/user/subscribesEventMenu.jsp] в строке [141]
+
+138: 
+139:                         </form>
+140:                     </td>
+141:                     <c:when test="${requestScope.started.isActive(entity.id) == true}">
+142:                         <td>
+143:                             <form method="post" action="" id="connect">
+144:                                 <input type="hidden" name="action" value="connect">
+
+
+Stacktrace:
+  2022-06-01 19:51:09,265 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 19:51:38,404 [http-nio-8080-exec-6] ERROR (Controller.java:35) - Произошла ошибка при обработке [/WEB-INF/view/user/subscribesEventMenu.jsp] в строке [141]
+
+138: 
+139:                         </form>
+140:                     </td>
+141:                     <c:when test="${requestScope.started.isActive(entity.id) == true}">
+142:                         <td>
+143:                             <form method="post" action="" id="connect">
+144:                                 <input type="hidden" name="action" value="connect">
+
+
+Stacktrace:
+  2022-06-01 19:51:53,963 [http-nio-8080-exec-7] ERROR (Controller.java:35) - Произошла ошибка при обработке [/WEB-INF/view/user/subscribesEventMenu.jsp] в строке [142]
+
+139:                         </form>
+140:                     </td>
+141:                     <td>
+142:                         <c:when test="${requestScope.started.isActive(entity.id) == true}">
+143:                             <form method="post" action="" id="connect">
+144:                                 <input type="hidden" name="action" value="connect">
+145:                                 <input type="hidden" name="id" value="${entity.id}"/>
+
+
+Stacktrace:
+  2022-06-01 19:52:00,268 [http-nio-8080-exec-8] ERROR (Controller.java:35) - Произошла ошибка при обработке [/WEB-INF/view/user/subscribesEventMenu.jsp] в строке [142]
+
+139:                         </form>
+140:                     </td>
+141:                     <td>
+142:                         <c:when test="${requestScope.started.isActive(entity.id) == true}">
+143:                             <form method="post" action="" id="connect">
+144:                                 <input type="hidden" name="action" value="connect">
+145:                                 <input type="hidden" name="id" value="${entity.id}"/>
+
+
+Stacktrace:
+  2022-06-01 19:53:06,244 [http-nio-8080-exec-7] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-01 19:53:17,326 [http-nio-8080-exec-1] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-01 19:55:29,241 [http-nio-8080-exec-4] ERROR (AuthFilter.java:73) - Cannot invoke "ua.epam.controller.commands.ICommand.execute(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)" because "ic" is null
+  2022-06-01 20:07:16,034 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 20:07:40,688 [http-nio-8080-exec-4] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-01 20:07:45,583 [http-nio-8080-exec-9] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-01 20:09:11,153 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 20:09:19,344 [http-nio-8080-exec-3] ERROR (AuthFilter.java:73) - Cannot invoke "java.lang.Integer.intValue()" because the return value of "java.util.HashMap.get(Object)" is null
+  2022-06-01 20:10:21,589 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 20:14:41,148 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 20:14:51,955 [http-nio-8080-exec-8] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-01 20:14:57,891 [http-nio-8080-exec-6] ERROR (AuthFilter.java:73) - Cannot invoke "ua.epam.controller.commands.ICommand.execute(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)" because "ic" is null
+  2022-06-01 20:15:04,985 [http-nio-8080-exec-4] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-01 20:15:20,755 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 20:15:52,741 [http-nio-8080-exec-7] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-01 20:16:00,918 [http-nio-8080-exec-9] ERROR (AuthFilter.java:73) - Cannot invoke "ua.epam.controller.commands.ICommand.execute(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)" because "ic" is null
+  2022-06-01 20:16:27,691 [http-nio-8080-exec-2] ERROR (AuthFilter.java:73) - Cannot invoke "ua.epam.controller.commands.ICommand.execute(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)" because "ic" is null
+  2022-06-01 20:16:58,297 [http-nio-8080-exec-5] ERROR (AuthFilter.java:73) - Cannot invoke "ua.epam.controller.commands.ICommand.execute(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)" because "ic" is null
+  2022-06-01 20:17:09,459 [http-nio-8080-exec-9] ERROR (AuthFilter.java:73) - Cannot invoke "String.equals(Object)" because "page" is null
+  2022-06-01 20:17:17,426 [http-nio-8080-exec-10] ERROR (AuthFilter.java:73) - Cannot invoke "String.equals(Object)" because "page" is null
+  2022-06-01 20:17:24,764 [http-nio-8080-exec-1] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-01 20:18:21,274 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 20:18:28,020 [http-nio-8080-exec-3] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-01 20:18:38,378 [http-nio-8080-exec-9] ERROR (AuthFilter.java:73) - Cannot invoke "String.equals(Object)" because "page" is null
+  2022-06-01 20:18:41,688 [http-nio-8080-exec-5] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-01 20:21:29,728 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 20:21:49,075 [http-nio-8080-exec-4] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-01 20:32:06,480 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 20:32:18,549 [http-nio-8080-exec-5] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-01 20:34:05,116 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 20:34:20,911 [http-nio-8080-exec-5] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-01 20:35:44,150 [http-nio-8080-exec-4] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-01 20:43:40,105 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 20:44:07,121 [http-nio-8080-exec-9] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-01 20:44:16,079 [http-nio-8080-exec-2] ERROR (AuthFilter.java:73) - Cannot invoke "ua.epam.controller.commands.ICommand.execute(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)" because "ic" is null
+  2022-06-01 20:47:36,997 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 20:47:49,396 [http-nio-8080-exec-3] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-01 20:47:56,178 [http-nio-8080-exec-7] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-01 20:49:41,195 [main] INFO  (ContextListener.java:24) - Context listener start working
+  2022-06-01 20:49:52,222 [http-nio-8080-exec-7] DEBUG (LogoutCommand.java:21) - Logout finished
+  2022-06-01 20:49:59,130 [http-nio-8080-exec-5] DEBUG (LogoutCommand.java:21) - Logout finished
+  
