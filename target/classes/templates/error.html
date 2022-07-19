@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>Error</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div style="text-align: center">
+    <img src="https://a0.muscache.com/airbnb/static/error_pages/404-Airbnb_final-d652ff855b1335dd3eedc3baa8dc8b69.gif"
+         width="313" height="428" class="hide-sm" alt=".">
+
+    <h2 th:text="${error}"></h2>
+    <h3 th:text="#{error}"></h3>
+    <a th:href="@{/}" th:text="#{label.button.toMain}" style="font-size: 25px">toMain</a>
+</div>
+
+</body>
+</html>

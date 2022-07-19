@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="${language}">
+<head>
+    <title th:text="#{title.createReport}"></title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div th:insert="templates :: navbar"/>
+
+<div class="container-fluid text-center">
+    <div class="content mt-3">
+
+        <div class="col-sm-5 sidenav"></div>
+
+        <div class="col-sm-2 text-left">
+
+            <div class="well" style="margin-top: 100px;">
+                <form method="post" th:action="@{${#httpServletRequest.requestURI}}" th:object="${entity}">
+                    <div class="createUser" style="alignment: center">
+                        <br/>
+                        <h2 th:text="#{title.createReport}">Create Event</h2>
+
+                        <label style="color: orange;font-size: 20px"> *</label>
+                        <label th:text="#{label.report.name}">nameToSet: </label>:
+                        <input type="text" class="form-control" th:field="*{name}" style="width: 280px;"/>
+                        <div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('name')}"
+                             th:errors="*{name}" style="width: 280px;">Name Error
+                        </div>
+                        <br>
+
+                        <div sec:authorize="hasRole('ROLE_MODERATOR')">
+                            <label style="color: orange;font-size: 20px"> *</label>
+                            <label th:text="#{label.speaker.login}">nameToSet: </label>:
+                            <input type="text" class="form-control" th:field="*{speakerName}" style="width: 280px;"/>
+                            <div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('speakerName')}"
+                                 th:errors="*{speakerName}" style="width: 280px;">Name Error
+                            </div>
+                            <br>
+                        </div>
+                        <div sec:authorize="hasRole('ROLE_SPEAKER')">
+                            <label th:text="#{label.speaker.login}">nameToSet: </label>:
+                            <input type="text" disabled class="form-control" th:field="*{speakerName}"
+                                   style="width: 280px;"/>
+                            <br>
+
+                            <input type="hidden" th:field="*{speakerName}">
+                        </div>
+
+                        <input type="hidden" th:field="*{eventId}">
+                    </div>
+                    <div sec:authorize="hasRole('ROLE_MODERATOR')">
+                        <input type="submit" th:value="#{title.createReport}" class="btn btn-default"
+                               style="width: 200px"><br>
+                    </div>
+                    <div sec:authorize="hasRole('ROLE_SPEAKER')">
+                        <input type="submit" th:value="#{title.suggestReport}" class="btn btn-default"
+                               style="width: 200px"><br>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

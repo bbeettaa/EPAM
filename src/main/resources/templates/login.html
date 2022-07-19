@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="${language}" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <title>Login</title>
+</head>
+<body>
+
+
+<nav class="navbar-inverse">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav">
+        </ul>
+        <div th:insert="templates :: navbar-right"/>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <div class="row content">
+        <br><br>
+        <div class="col-sm-5"></div>
+
+        <div class="col-sm-2 ">
+            <div class="well">
+                <form th:action="@{/login}" method="post">
+                    <label th:text="#{label.user.login}" for="username"/>
+                    <input class="form-control" type="text" name="username" id="username"/>
+                    <br><br>
+
+                    <label th:text="#{label.user.password}"></label>
+                    <input class="form-control" type="password" name="password"/>
+                    <br><br>
+
+                    <label for="remember" th:text="#{label.button.rememberMe}"></label>
+                    <input type="checkbox" name="remember-me" id="remember"/>
+                    <br><br>
+
+                    <input class="btn btn-default" type="submit" style="width: 100%" th:value="#{title.login}"/>
+                    <br><br>
+
+                    <div class="alert alert-info" th:if="${param.logout}" th:text="#{info.logged.out}">
+                        You have been logged out.
+                    </div>
+                    <div class="alert alert-danger" th:if="${param.error}" th:text="#{error.invalid.username}">
+                        Invalid username or password.
+                    </div>
+                </form>
+            </div>
+
+            <br><br>
+            <div class="well" style="text-align: center">
+                <a th:href="@{/registration}" th:text="#{label.button.registration}">123</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

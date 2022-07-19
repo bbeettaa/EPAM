@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="${language}" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        footer {
+            background-color: #555;
+            color: white;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div th:fragment="user-navbar">
+    <nav class="navbar-inverse">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                <li class="active"><a th:href="@{/user}" th:text="#{label.button.toMain}"></a></li>
+                <li><a th:href="@{/user/subscriptions}" th:text="#{title.subscriptions}"></a></li>
+            </ul>
+            <div th:insert="templates :: navbar-right"/>
+        </div>
+    </nav>
+</div>
+
+<div th:insert="templates :: sidenav-event"/>
+<div th:insert="templates :: eventList"/>
+
+
+<footer class="container-fluid text-center">
+    <br>
+</footer>
+
+
+</body>
+</html>

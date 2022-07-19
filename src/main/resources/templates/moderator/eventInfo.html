@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="${language}">
+<head>
+    <title>Event info</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+
+        .align-left {
+            float: left;
+        }
+
+        .align-right {
+            float: left;
+            margin-left: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div th:insert="templates :: navbar"/>
+
+<div class="container-fluid text-center">
+    <div class="row content">
+        <div class="col-sm-2 sidenav" style="height: 100%">
+            <div class="well">
+                <a th:href="@{/report/new/{eventId}(eventId=${event.getId()})}" th:text="#{title.createReport}"></a>
+                <br>
+            </div>
+        </div>
+
+        <div class="col-sm-8 text-left">
+            <table class="table table-hover">
+                <caption style="font-size:160%;" th:text="#{title.eventInfo}"></caption>
+                <tr>
+                    <th th:text="#{label.event.id}"></th>
+                    <th th:text="#{label.event.name}"></th>
+                    <th th:text="#{label.event.date}"></th>
+                    <td th:text="#{label.event.time}"></td>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <ul>
+                        <td th:text="${event.getId()}"></td>
+                        <td th:text="${event.getName()}"></td>
+                        <td th:text="${event.getDateBegin()}"></td>
+                        <td th:text="${event.getTimeBegin}"></td>
+                        <td>
+                            <form method="get" th:action="@{/event/{id}/edit(id=${event.getId()})}"
+                                  id="updateEv">
+                                <input type="submit" class="btn btn-info" th:value="#{label.button.updateInfo}"/>
+                            </form>
+                        </td>
+                        <td>
+                            <form method="post" th:action="@{/event/{id}/remove(id=${event.getId()})}"
+                                  id="dellEv">
+                                <input type="submit" class="btn btn-danger" th:value="#{label.button.delete}"/>
+                            </form>
+                        </td>
+                        <td>
+                            <c:choose>
+                                <c:when test="${requestScope.startEvent == true}">
+                                    <form method="post" action="" id="start">
+                                        <input type="hidden" name="action" value="stopEvent">
+                                        <input type="hidden" name="id" value="${requestScope.event.id}"/>
+                                        <input type="submit" class="btn btn-primary" th:text="#{label.button.stop}"/>
+                                    </form>
+                                </c:when>
+                                <c:when test="${requestScope.startEvent == false}">
+                                    <form method="post" action="" id="start1">
+                                        <input type="hidden" name="action" value="startEvent">
+                                        <input type="hidden" name="id" value="${requestScope.event.id}"/>
+                                        <input type="submit" class="btn btn-warning" th:text="#{label.button.start}"/>
+                                    </form>
+                                </c:when>
+                            </c:choose>
+                        </td>
+                    </ul>
+                </tr>
+            </table>
+
+            <table class="table table-hover">
+                <caption style="font-size:160%;" th:text="#{title.statistic}"></caption>
+                <tr>
+                    <th th:text="#{label.event.reports}"></th>
+                    <th th:text="#{label.event.subs}"></th>
+                    <th th:text="#{label.event.joined}"></th>
+                </tr>
+                <tr>
+                    <ul>
+                        <td th:text="${event.getReports()}"></td>
+                        <td th:text="${event.getSubscribers()}"></td>
+                        <td></td>
+                    </ul>
+                </tr>
+
+            </table>
+
+
+            <table class="table table-hover">
+                <caption style="font-size:160%;" th:text="#{title.allReports}"></caption>
+                <tr>
+                    <th th:text="#{label.report.id}"></th>
+                    <th th:text="#{label.report.name}"></th>
+                    <th th:text="#{label.speaker.name}"></th>
+                    <th th:text="#{label.speaker.login}"></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <div th:each="report : ${entities}">
+                    <tr>
+                        <ul>
+                            <td th:text="${report.getId()}"></td>
+                            <td th:text="${report.getName()}"></td>
+                            <td >
+                                <div class="align-left" th:text="${report.getSpeaker().getName()}">left</div>
+                                <div class="align-right" th:text="${report.getSpeaker().getSurname()}">right</div>
+                            </td>
+                            <td th:text="${report.getSpeaker().getLogin()}"></td>
+                            <td>
+                                <form method="get" th:action="@{/report/{id}/edit(id=${report.getId()})}" id="update">
+                                    <input type="submit" class="btn btn-info" th:value="#{label.button.updateInfo}"/>
+                                </form>
+                            </td>
+                            <td>
+                                <form method="post" th:action="@{/report/{id}/remove(id=${report.getId()})}" id="dell">
+                                    <input type="submit" class="btn btn-danger" th:value="#{label.button.delete}"/>
+                                </form>
+                            </td>
+                        </ul>
+                    </tr>
+                </div>
+            </table>
+
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

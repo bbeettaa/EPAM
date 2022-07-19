@@ -1,0 +1,382 @@
+<div th:fragment="eventList">
+    <div class="container-fluid text-center">
+        <div class="col-sm-9 text-left">
+            <div class="container-fluid text-left">
+                <div class="row content">
+                    <table class="table table-hover">
+                        <caption style="font-size:160%;" th:text="#{title.allEvents}">All</caption>
+                        <tr>
+                            <th>
+                                <a th:href="@{?pattern={pattern}&sortOrder={sortOrder}&sortType={sortType}&size={size}&page={page}
+                        (pattern=${pattern},sortOrder=ID,sortType=${sortType},size=${size},page=${page+1})}"
+                                   th:text="#{label.user.id}"></a></th>
+                            <th>
+                                <a th:href="@{?pattern={pattern}&sortOrder={sortOrder}&sortType={sortType}&size={size}&page={page}
+                        (pattern=${pattern},sortOrder=NAME,sortType=${sortType},size=${size},page=${page+1})}"
+                                   th:text="#{label.event.name}"></a></th>
+                            <th>
+                                <a th:href="@{?pattern={pattern}&sortOrder={sortOrder}&sortType={sortType}&size={size}&page={page}
+                        (pattern=${pattern},sortOrder=DATE,sortType=${sortType},size=${size},page=${page+1})}"
+                                   th:text="#{label.event.date}"></a></th>
+                            <th>
+                                <a th:href="@{?pattern={pattern}&sortOrder={sortOrder}&sortType={sortType}&size={size}&page={page}
+                        (pattern=${pattern},sortOrder=TIME,sortType=${sortType},size=${size},page=${page+1})}"
+                                   th:text="#{label.event.time}"></a></th>
+                            <th>
+                                <a th:href="@{?pattern={pattern}&sortOrder={sortOrder}&sortType={sortType}&size={size}&page={page}
+                        (pattern=${pattern},sortOrder=SUBS,sortType=${sortType},size=${size},page=${page+1})}"
+                                   th:text="#{label.event.subs}"></a></th>
+                            <th>
+                                <a th:href="@{?pattern={pattern}&sortOrder={sortOrder}&sortType={sortType}&size={size}&page={page}
+                        (pattern=${pattern},sortOrder=REPORT,sortType=${sortType},size=${size},page=${page+1})}"
+                                   th:text="#{label.event.reports}"></a></th>
+                            <th></th>
+                            <th></th>
+                            <th sec:authorize="hasRole('ROLE_MODERATOR')"></th>
+                            <th sec:authorize="hasRole('ROLE_USER')"></th>
+                        </tr>
+                        <div th:each="entity : ${entities}">
+                            <tr class="warning" th:if="${entity.isActive()}">
+                                <div th:insert="templates :: eventTable-row"/>
+                            </tr>
+                            <tr th:if="not ${entity.isActive()}">
+                                <div th:insert="templates :: eventTable-row"/>
+                            </tr>
+                        </div>
+                    </table>
+                    <div th:insert="templates :: pagging"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div th:fragment="eventTable-row">
+    <ul>
+        <td><p th:text="${entity.getId()}">user</p></td>
+        <td><p th:text="${entity.getName()}">user</p></td>
+        <td><p th:text="${entity.getDateBegin()}">user</p></td>
+        <td><p th:text="${entity.getTimeBegin()}">user</p></td>
+        <td><p th:text="${entity.getSubscribers()}">user</p></td>
+        <td><p th:text="${entity.getReports()}">user</p></td>
+
+        <td>
+            <a th:href="@{/event/{id}(id=${entity.getId()})}"
+               th:text="#{label.button.info}">user</a>
+        </td>
+        <td>
+            <!--Edit-->
+            <div sec:authorize="hasRole('ROLE_MODERATOR')">
+                <a th:href="@{/event/{id}/edit(id=${entity.getId()})}"
+                   th:text="#{label.button.edit}">user</a>
+            </div>
+            <!--Subscribe, unsubscribe-->
+            <div sec:authorize="hasRole('ROLE_USER')">
+                <form th:method="post" th:if="not ${entity.isSubscribe()}"
+                      th:action="@{/user/{id}/subscribe?pattern={pattern}&sortOrder={sortOrder}&sortType={sortType}&&page={page}&size={size}
+                                            (pattern=${pattern},id=${entity.getId()},sortOrder=${sortOrder},sortType=${sortType},
+                                            size=${size},page=${page+1})}">
+                    <button type="submit" class="btn btn-info"
+                            th:text="#{label.button.subscribe}"></button>
+                </form>
+                <form th:method="post"
+                      th:if="${entity.isSubscribe()} and !${pageName=='subscriptions'}"
+                      th:action="@{/user/{id}/unsubscribe?pattern={pattern}&sortOrder={sortOrder}&sortType={sortType}&page={page}&size={size}
+                                              ( pattern=${pattern}, id=${entity.getId()},sortOrder=${sortOrder},sortType=${sortType},size=${size},page=${page+1})}">
+                    <button type="submit" class="btn btn-danger"
+                            th:text="#{label.button.unsubscribe}"></button>
+                </form>
+                <form th:method="post"
+                      th:if="${entity.isSubscribe()} and ${pageName=='subscriptions'}"
+                      th:action="@{/user/subscriptions/{id}/unsubscribe?pattern={pattern}&sortOrder={sortOrder}&sortType={sortType}&page={page}&size={size}
+                                              ( pattern=${pattern}, id=${entity.getId()},sortOrder=${sortOrder},sortType=${sortType},size=${size},page=${page+1})}">
+                    <button type="submit" class="btn btn-danger"
+                            th:text="#{label.button.unsubscribe}"></button>
+                </form>
+            </div>
+        </td>
+        <!--Remove-->
+        <div sec:authorize="hasRole('ROLE_MODERATOR')">
+            <td>
+                <form th:method="post"
+                      th:action="@{event/{id}/remove?pattern={pattern}&sortOrder={sortOrder}&sortType={sortType}&&page={page}&size={size}
+                                      (pattern=${pattern},id=${entity.getId()},sortOrder=${sortOrder},sortType=${sortType},size=${size},page=${page+1})}">
+
+                    <input type="button" onclick="submit()" th:value="#{label.button.delete}"
+                           class="btn btn-danger"/>
+                </form>
+            </td>
+        </div>
+        <!--Join to stream-->
+        <td sec:authorize="hasRole('ROLE_USER')">
+            <div th:if="${entity.isActive()}">
+                <form th:method="post"
+                      th:action="@{/user/{id}/connect
+                                      (id=${entity.getId()})}">
+
+                    <input type="submit" th:value="#{label.button.join}" class="btn btn-warning"/>
+                </form>
+            </div>
+        </td>
+    </ul>
+</div>
+
+<div th:fragment="pagging">
+    <nav aria-label="...">
+        <ul class="pagination">
+            <li class="page-item disabled" th:if="${page<=0}">
+                <a class="page-link" th:text="#{label.button.previous}"></a>
+            </li>
+            <li class="page-item" th:if="${page>0}">
+                <a class="page-link" th:text="#{label.button.previous}"
+                   th:href="@{?pattern={pattern}&sortOrder={sortOrder}&sortType={sortType}&page={page}&size={size}
+                                                               (pattern=${pattern},sortOrder=${sortOrder},sortType=${sortType},page=${page},size=${size})}"
+                >Previous</a>
+            </li>
+
+            <li class="page-item" th:if="${page - 2>0}"><a class="page-link"
+                                                           th:href="@{?pattern={pattern}&sortOrder={sortOrder}&page={page}&size={size}
+                                                               (pattern=${pattern},sortOrder=${sortOrder},sortType=${sortType},page=${page-2},size=${size})}"
+                                                           th:text="${page - 2}">-3</a></li>
+            <li class="page-item" th:if="${page - 1>0}"><a class="page-link"
+                                                           th:href="@{?pattern={pattern}&sortOrder={sortOrder}&page={page}&size={size}
+                                                               (pattern=${pattern},sortOrder=${sortOrder},sortType=${sortType},page=${page-1},size=${size})}"
+                                                           th:text="${page - 1}">-2</a></li>
+            <li class="page-item" th:if="${page>0}"><a class="page-link"
+                                                       th:href="@{?pattern={pattern}&sortOrder={sortOrder}&page={page}&size={size}
+                                                               (pattern=${pattern},sortOrder=${sortOrder},sortType=${sortType},page=${page},size=${size})}"
+                                                       th:text="${page}">-1</a></li>
+
+            <li class="page-item active"><span class="page-link" th:text="${page+1}"><span
+                    class="sr-only">(current)</span></span>
+            </li>
+
+            <li class="page-item" th:if="${page+2<=count}"><a class="page-link"
+                                                              th:href="@{?pattern={pattern}&sortOrder={sortOrder}&page={page}&size={size}
+                                                               (pattern=${pattern},sortOrder=${sortOrder},sortType=${sortType},page=${page+2},size=${size})}"
+                                                              th:text="${page+2}">+1</a></li>
+            <li class="page-item" th:if="${page+3<=count}"><a class="page-link"
+                                                              th:href="@{?pattern={pattern}&sortOrder={sortOrder}&page={page}&size={size}
+                                                               (pattern=${pattern},sortOrder=${sortOrder},sortType=${sortType},page=${page+3},size=${size})}"
+                                                              th:text="${page+3}">+2</a></li>
+            <li class="page-item" th:if="${page+4<=count}"><a class="page-link"
+                                                              th:href="@{?pattern={pattern}&sortOrder={sortOrder}&page={page}&size={size}
+                                                               (pattern=${pattern},sortOrder=${sortOrder},sortType=${sortType},page=${page+4},size=${size})}"
+                                                              th:text="${page+4}">+3</a></li>
+
+            <li class="page-item" th:if="${page+1<count}">
+                <a class="page-link"
+                   th:href="@{?pattern={pattern}&sortOrder={sortOrder}&sortType={sortType}&page={page}&size={size}
+                                                               (pattern=${pattern},sortOrder=${sortOrder},sortType=${sortType},page=${page+2},size=${size})}"
+                   th:text="#{label.button.next}"
+                >Next</a>
+            </li>
+            <li class="page-item disabled" th:if="${page+1>=count}"><a class="page-link"
+                                                                       th:text="#{label.button.next}"></a>
+            </li>
+        </ul>
+
+        <div class="nav navbar-nav navbar-right">
+            <form th:method="get" th:action="@{?pattern={pattern}&sortOrder={sortOrder}&sortType={sortType}
+                                      (pattern=${pattern},sortOrder=${sortOrder},sortType=${sortType})}">
+                <label th:text="#{label.page.size}"> : </label>
+                <select id="role" class="btn btn-default dropdown-toggle" name="size" style="width: 65px"
+                        onchange="submit()">
+                    <option value="10" th:if="${size == 10}" selected>10</option>
+                    <option value="2" th:if="${size == 2}" selected>2</option>
+                    <option value="10" th:if="${size != 10}">10</option>
+                    <option value="2" th:if="${size != 2}">2</option>
+                </select>
+            </form>
+        </div>
+    </nav>
+</div>
+
+
+<div th:fragment="sidenav-event">
+    <div class="col-sm-2 sidenav" style="height: 900px; background-color: #f1f1f1">
+        <br>
+        <div class="well">
+            <form method="get" th:action="@{${#httpServletRequest.requestURI}}"
+                  style="margin-left: 10px; text-align: left"><br>
+                <div class="input-group">
+                    <input type="text" class="form-control" th:placeholder="#{label.button.search}"
+                           name="pattern" th:value="${pattern}">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </div>
+                </div>
+
+            <br>
+
+                <div class="well">
+
+                    <div class="radio" style="margin-left: 20px;">
+                        <input type="radio" id="ID" name="sortOrder" value="ID" th:if="${sortOrder=='ID'}" checked>
+                        <label for="ID" th:text="#{label.event.id}" th:if="${sortOrder=='ID'}"></label>
+                        <input type="radio" id="ID1" name="sortOrder" value="ID" th:if="${sortOrder!='ID'}">
+                        <label for="ID1" th:text="#{label.event.id}" th:if="${sortOrder!='ID'}"></label>
+                    </div>
+
+                    <div class="radio" style="margin-top: 5px;margin-left: 20px">
+                        <input type="radio" name="sortOrder" value="NAME" id="NAME" th:if="${sortOrder=='NAME'}"
+                               checked>
+                        <label for="NAME" th:text="#{label.sort.byName}" th:if="${sortOrder=='NAME'}"></label>
+                        <input type="radio" name="sortOrder" value="NAME" id="NAME1" th:if="${sortOrder!='NAME'}">
+                        <label for="NAME1" th:text="#{label.sort.byName}" th:if="${sortOrder!='NAME'}"></label>
+                    </div>
+
+                    <div class="radio" style="margin-top: 5px;margin-left: 20px">
+                        <input type="radio" name="sortOrder" value="DATE" id="DATE" th:if="${sortOrder=='DATE'}"
+                               checked>
+                        <label for="DATE" th:text="#{label.sort.byDate}" th:if="${sortOrder=='DATE'}"></label>
+                        <input type="radio" name="sortOrder" value="DATE" id="DATE1" th:if="${sortOrder!='DATE'}">
+                        <label for="DATE1" th:text="#{label.sort.byDate}" th:if="${sortOrder!='DATE'}"></label>
+                    </div>
+
+                    <div class="radio" style="margin-top: 5px;margin-left: 20px">
+                        <input type="radio" name="sortOrder" value="TIME" id="TIME" th:if="${sortOrder=='TIME'}"
+                               checked>
+                        <label for="TIME" th:text="#{label.event.time}" th:if="${sortOrder=='TIME'}"></label>
+                        <input type="radio" name="sortOrder" value="TIME" id="TIME1" th:if="${sortOrder!='TIME'}">
+                        <label for="TIME1" th:text="#{label.event.time}" th:if="${sortOrder!='TIME'}"></label>
+                    </div>
+
+                    <div class="radio" style="margin-top: 5px;margin-left: 20px">
+                        <input type="radio" name="sortOrder" value="REPORT" id="REPORT"
+                               th:if="${sortOrder=='REPORT'}" checked>
+                        <label for="REPORT" th:text="#{label.sort.byReports}"
+                               th:if="${sortOrder=='REPORT'}"></label>
+                        <input type="radio" name="sortOrder" value="REPORT" th:if="${sortOrder!='REPORT'}"
+                               id="REPORT1">
+                        <label for="REPORT1" th:text="#{label.sort.byReports}"
+                               th:if="${sortOrder!='REPORT'}"></label>
+                    </div>
+
+                    <div class="radio" style="margin-top: 5px;margin-left: 20px">
+                        <input type="radio" name="sortOrder" value="SUBS" id="SUBS" th:if="${sortOrder=='SUBS'}"
+                               checked>
+                        <label for="SUBS" th:text="#{label.sort.bySubs}" th:if="${sortOrder=='SUBS'}"></label>
+                        <input type="radio" name="sortOrder" value="SUBS" id="SUBS1" th:if="${sortOrder!='SUBS'}">
+                        <label for="SUBS1" th:text="#{label.sort.bySubs}" th:if="${sortOrder!='SUBS'}"></label>
+                    </div>
+                </div>
+
+                <div class="well">
+                    <div class="radio" style="margin-left: 20px">
+                        <input type="radio" name="sortType" value="ASC" th:if="${sortType=='ASC'}" id="ASC"
+                               checked>
+                        <label for="ASC" th:text="#{label.sort.asc}" th:if="${sortType=='ASC'}"></label>
+                        <input type="radio" name="sortType" value="ASC" th:if="${sortType!='ASC'}" id="ASC1">
+                        <label for="ASC1" th:text="#{label.sort.asc}" th:if="${sortType!='ASC'}"></label>
+                    </div>
+
+                    <div class="radio" style="margin-top: 5px;margin-left: 20px">
+                        <input type="radio" name="sortType" value="DESC" id="DESC" th:if="${sortType=='DESC'}"
+                               checked>
+                        <label for="DESC" th:text="#{label.sort.desc}" th:if="${sortType=='DESC'}"></label>
+                        <input type="radio" name="sortType" value="DESC" id="DESC1" th:if="${sortType!='DESC'}">
+                        <label for="DESC1" th:text="#{label.sort.desc}" th:if="${sortType!='DESC'}"></label>
+                    </div>
+                </div>
+                <input type="hidden" name="page" th:value="${page+1}">
+                <input type="hidden" name="size" th:value="${size}">
+
+                <div style="text-align: center">
+                    <button class="btn btn-default" type="submit" style="width: 150px"><i
+                            class="glyphicon glyphicon-search"></i></button>
+                </div>
+
+            </form>
+        </div>
+
+        <div sec:authorize="hasRole('ROLE_MODERATOR')">
+            <div class="well">
+                <form method="get" th:action="@{/event/new/}" style="margin-left: 10px;text-align: center">
+                    <div class="createUser">
+                        <button type="submit" class="btn btn-default" th:text="#{title.createEvent}"></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div th:fragment="navbar">
+    <div sec:authorize="hasRole('ROLE_MODERATOR')">
+        <div th:insert="templates :: moderator-navbar"/>
+    </div>
+    <div sec:authorize="hasRole('ROLE_SPEAKER')">
+        <div th:insert="templates :: speaker-navbar"/>
+    </div>
+    <div sec:authorize="hasRole('ROLE_USER')">
+        <div th:insert="templates :: user-navbar"/>
+    </div>
+</div>
+
+<div th:fragment="moderator-navbar">
+    <nav class="navbar-inverse">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                <li><a th:href="@{/moderator}" th:text="#{title.allEvents}"></a></li>
+                <li><a th:href="@{/moderator/suggestions}" th:text="#{title.suggestedReports}"></a></li>
+            </ul>
+            <div th:insert="templates :: navbar-right"/>
+        </div>
+    </nav>
+</div>
+
+<div th:fragment="speaker-navbar">
+    <nav class="navbar-inverse">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                <li><a th:href="@{/speaker}" th:text="#{title.allEvents}"></a></li>
+                <li><a th:href="@{/speaker/suggestions}" th:text="#{title.suggestedReports}"></a></li>
+            </ul>
+            <div th:insert="templates :: navbar-right"/>
+        </div>
+    </nav>
+</div>
+
+<div th:fragment="user-navbar">
+    <nav class="navbar-inverse">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                <li><a th:href="@{/user}" th:text="#{label.button.toMain}"></a></li>
+                <li><a th:href="@{/user/subscriptions}" th:text="#{title.subscriptions}"></a></li>
+            </ul>
+            <div th:insert="templates :: navbar-right"/>
+        </div>
+    </nav>
+</div>
+
+<div th:fragment="navbar-right">
+    <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" th:text="#{label.button.selectLanguage}">Language
+                <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a th:href="@{${#httpServletRequest.requestURI}(lang='en')}">English</a></li>
+                <li><a th:href="@{${#httpServletRequest.requestURI}(lang='uk')}">Українська</a></li>
+            </ul>
+        </li>
+        <li class="dropdown" sec:authorize="isAuthenticated()">
+            <a class="dropdown-toggle" data-toggle="dropdown"><span sec:authentication="name"></span>
+                <span class="caret"></span></a>
+            <ul class="dropdown-menu" style="text-align: center">
+                <br>
+                <form th:action="@{/logout}" method="post">
+                    <li>
+                        <button class="btn btn-default" style="width: 100%;" type="submit">
+                            <span th:text=" #{label.button.logout}" class="glyphicon glyphicon-log-out"></span>
+                        </button>
+                    </li>
+                </form>
+                <br>
+            </ul>
+        </li>
+    </ul>
+</div>

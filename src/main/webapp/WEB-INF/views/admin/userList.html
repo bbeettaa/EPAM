@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Users list</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <ul class="nav navbar-nav">
+            <li class="active"><a th:href="@{/admin}" th:text="#{title.allUsers}">User list</a></li>
+            <li><a th:href="@{/admin/new}" th:text="#{label.button.create}">Create</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <!--<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>-->
+            <li><a href="#" th:value="#{title.login}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container-fluid text-center">
+    <div class="row content">
+        <div class="col-sm-2 sidenav" style="height: 100%"></div>
+
+        <div class="col-sm-8 text-left">
+
+            <div class="col-sm-3 text-left">
+                <div class="well">
+                    <form class="" th:method="get" th:action="@{/admin?sortOrder={sortOrder}&sortType={sortType}&size={size}
+                                      (sortOrder=${sortOrder},sortType=${sortType},size=${size})}">
+                        <div class="input-group">
+                            <input type="text" class="form-control" th:placeholder="#{label.button.search}" name="pattern"
+                                   th:value="${pattern}">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit">
+                                    <i class="glyphicon glyphicon-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <table class="table table-hover">
+                <caption style="font-size:160%;" th:text="#{title.allUsers}">All users</caption>
+                <tr>
+                    <th>
+                        <a th:href="@{/admin?pattern={pattern}&sortOrder={sortOrder}&sortType={sortType}&size={size}&page={page}
+                        (pattern=${pattern},sortOrder=ID,sortType=${sortType},size=${size},page=${page+1})}" th:text="#{label.user.id}"></a></th>
+                    <th>
+                        <a th:href="@{/admin?pattern={pattern}&sortOrder={sortOrder}&sortType={sortType}&size={size}&page={page}
+                        (pattern=${pattern},sortOrder=LOGIN,sortType=${sortType},size=${size},page=${page+1})}" th:text="#{label.user.login}"></a></th>
+                    <th>
+                        <a th:href="@{/admin?pattern={pattern}&sortOrder={sortOrder}&sortType={sortType}&size={size}&page={page}
+                        (pattern=${pattern},sortOrder=PASS,sortType=${sortType},size=${size},page=${page+1})}" th:text="#{label.user.password}"></a></th>
+                    <th>
+                        <a th:href="@{/admin?pattern={pattern}&sortOrder={sortOrder}&sortType={sortType}&size={size}&page={page}
+                        (pattern=${pattern},sortOrder=EMAIL,sortType=${sortType},size=${size},page=${page+1})}" th:text="#{label.user.email}"></a></th>
+                    <th>
+                        <a th:href="@{/admin?pattern={pattern}&sortOrder={sortOrder}&sortType={sortType}&size={size}&page={page}
+                        (pattern=${pattern},sortOrder=NAME,sortType=${sortType},size=${size},page=${page+1})}" th:text="#{label.user.name}"></a></th>
+                    <th>
+                        <a th:href="@{/admin?pattern={pattern}&sortOrder={sortOrder}&sortType={sortType}&size={size}&page={page}
+                        (pattern=${pattern},sortOrder=SURNAME,sortType=${sortType},size=${size},page=${page+1})}" th:text="#{label.user.surname}"></a></th>
+                    <th>
+                        <a th:href="@{/admin?pattern={pattern}&sortOrder={sortOrder}&sortType={sortType}&size={size}&page={page}
+                        (pattern=${pattern},sortOrder=ROLE,sortType=${sortType},size=${size},page=${page+1})}" th:text="#{label.user.role}"></a></th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <div th:each="person : ${persons}">
+                    <tr>
+                        <ul>
+                            <td><p th:text="${person.getId()}">user</p></td>
+                            <td><p th:text="${person.getLogin()}">user</p></td>
+                            <td><p th:text="${person.getPassword()}">user</p></td>
+                            <td><p th:text="${person.getEmail()}">user</p></td>
+                            <td><p th:text="${person.getName()}">user</p></td>
+                            <td><p th:text="${person.getSurname()}">user</p></td>
+                            <td><p th:text="${person.getRole()}">user</p></td>
+
+                            <td><a th:href="@{/admin/{id}(id=${person.getId()})}" th:value="#{label.button.info}">user</a></td>
+                            <td>
+                                <form th:method="get" th:action="@{/admin/{id}/edit(id=${person.getId()})}">
+                                    <input type="submit"  th:value="#{label.button.edit}" class="btn btn-light"/>
+                                </form>
+                            </td>
+                            <td>
+                                <form th:method="delete" th:if="${person.getRole() != 'ADMIN'}"
+                                      th:action="@{/admin/{id}?pattern={pattern}&sortOrder={sortOrder}&sortType={sortType}&&page={page}&size={size}
+                                      (pattern=${pattern},id=${person.getId()},sortOrder=${sortOrder},sortType=${sortType},size=${size},page=${page+1})}">
+
+                                    <input type="button" onclick="submit()"  th:value="#{label.button.delete}"
+                                           class="btn btn-outline-dark"/>
+                                </form>
+                            </td>
+
+                        </ul>
+                    </tr>
+                </div>
+            </table>
+
+            <nav aria-label="...">
+                <ul class="pagination">
+                    <li class="page-item disabled" th:if="${page<=0}">
+                        <a class="page-link"  th:text="#{label.button.previous}"></a>
+                    </li>
+                    <li class="page-item" th:if="${page>0}">
+                        <a class="page-link"
+                           th:href="@{/admin?pattern={pattern}&sortOrder={sortOrder}&sortType={sortType}&page={page}&size={size}
+                                                               (pattern=${pattern},sortOrder=${sortOrder},sortType=${sortType},page=${page},size=${size})}"
+                        >Previous</a>
+                    </li>
+
+                    <li class="page-item" th:if="${page - 2>0}"><a class="page-link"
+                                                                 th:href="@{/admin?pattern={pattern}&sortOrder={sortOrder}&page={page}&size={size}
+                                                               (pattern=${pattern},sortOrder=${sortOrder},sortType=${sortType},page=${page-2},size=${size})}"
+                                                                 th:text="${page - 2}">-3</a></li>
+                    <li class="page-item" th:if="${page - 1>0}"><a class="page-link"
+                                                                 th:href="@{/admin?pattern={pattern}&sortOrder={sortOrder}&page={page}&size={size}
+                                                               (pattern=${pattern},sortOrder=${sortOrder},sortType=${sortType},page=${page-1},size=${size})}"
+                                                                 th:text="${page - 1}">-2</a></li>
+                    <li class="page-item" th:if="${page>0}"><a class="page-link"
+                                                               th:href="@{/admin?pattern={pattern}&sortOrder={sortOrder}&page={page}&size={size}
+                                                               (pattern=${pattern},sortOrder=${sortOrder},sortType=${sortType},page=${page},size=${size})}"
+                                                               th:text="${page}">-1</a></li>
+
+                    <li class="page-item active"><span class="page-link" th:text="${page+1}"><span class="sr-only">(current)</span></span>
+                    </li>
+
+                    <li class="page-item" th:if="${page+2<=count}"><a class="page-link"
+                                                                      th:href="@{/admin?pattern={pattern}&sortOrder={sortOrder}&page={page}&size={size}
+                                                               (pattern=${pattern},sortOrder=${sortOrder},sortType=${sortType},page=${page+2},size=${size})}"
+                                                                      th:text="${page+2}">+1</a></li>
+                    <li class="page-item" th:if="${page+3<=count}"><a class="page-link"
+                                                                      th:href="@{/admin?pattern={pattern}&sortOrder={sortOrder}&page={page}&size={size}
+                                                               (pattern=${pattern},sortOrder=${sortOrder},sortType=${sortType},page=${page+3},size=${size})}"
+                                                                      th:text="${page+3}">+2</a></li>
+                    <li class="page-item" th:if="${page+4<=count}"><a class="page-link"
+                                                                      th:href="@{/admin?pattern={pattern}&sortOrder={sortOrder}&page={page}&size={size}
+                                                               (pattern=${pattern},sortOrder=${sortOrder},sortType=${sortType},page=${page+4},size=${size})}"
+                                                                      th:text="${page+4}">+3</a></li>
+
+                    <li class="page-item" th:if="${page+1<count}">
+                        <a class="page-link"
+                           th:href="@{/admin?pattern={pattern}&sortOrder={sortOrder}&sortType={sortType}&page={page}&size={size}
+                                                               (pattern=${pattern},sortOrder=${sortOrder},sortType=${sortType},page=${page+2},size=${size})}"
+                           th:text="#{label.button.next}"
+                        >Next</a>
+                    </li>
+                    <li class="page-item disabled" th:if="${page+1>=count}"><a class="page-link" th:text="#{label.button.next}"></a></li>
+                </ul>
+
+                <div class="nav navbar-nav navbar-right">
+                    <form th:method="get" th:action="@{/admin?pattern={pattern}&sortOrder={sortOrder}&sortType={sortType}
+                                      (pattern=${pattern},sortOrder=${sortOrder},sortType=${sortType})}">
+                        <label th:text="#{label.page.size}"> : </label>
+                        <select id="role" class="btn btn-default dropdown-toggle" name="size" style="width: 65px"
+                                onchange="submit()">
+                            <option value="10" th:if="${size == 10}" selected>10</option>
+                            <option value="2" th:if="${size == 2}" selected>2</option>
+                            <option value="10" th:if="${size != 10}">10</option>
+                            <option value="2" th:if="${size != 2}">2</option>
+                        </select>
+                    </form>
+                </div>
+            </nav>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+</body>
+</html>

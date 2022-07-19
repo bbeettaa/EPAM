@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="${language}" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        footer {
+            background-color: #555;
+            color: white;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid text-left">
+    <div class="row content">
+
+        <div th:fragment="speaker-navbar">
+            <nav class="navbar-inverse">
+                <div class="container-fluid">
+
+                        <div sec:authorize="hasRole('ROLE_MODERATOR')">
+                            <ul class="nav navbar-nav">
+                            <li><a th:href="@{/moderator}" th:text="#{title.allEvents}"></a></li>
+                            <li class="active"><a th:href="@{/moderator/suggestions}" th:text="#{title.suggestedReports}"></a></li>
+                            </ul>
+                        </div>
+                        <div sec:authorize="hasRole('ROLE_SPEAKER')">
+                            <ul class="nav navbar-nav">
+                            <li><a th:href="@{/speaker}" th:text="#{title.allEvents}"></a></li>
+                            <li class="active"><a th:href="@{/speaker/suggestions}" th:text="#{title.suggestedReports}"></a></li>
+                            </ul>
+                        </div>
+                    <div th:insert="templates :: navbar-right"/>
+                </div>
+            </nav>
+        </div>
+
+        <div class="col-sm-3 sidenav"></div>
+        <div class="col-sm-6 text-left">
+            <table class="table table-hover">
+                <caption style="font-size:160%;" th:text="#{title.allReports}"></caption>
+                <tr>
+                    <th th:text="#{label.event.name}"></th>
+                    <th th:text="#{label.report.name}"></th>
+                    <th th:text="#{label.speaker.name}"></th>
+                    <th th:text="#{label.speaker.login}"></th>
+                    <div sec:authorize="hasRole('ROLE_SPEAKER')">
+                        <th></th>
+                    </div>
+                    <div sec:authorize="hasRole('ROLE_MODERATOR')">
+                        <th></th>
+                        <th></th>
+                    </div>
+                </tr>
+                <div th:each="report : ${entities}">
+                    <tr>
+                        <ul>
+                            <td th:text="${eventService.get(report.getEventId()).getName()}"></td>
+                            <td th:text="${report.getName()}"></td>
+                            <td>
+                                <div class="align-left" th:text="${report.getSpeaker().getName()}">left</div>
+                                <div class="align-right" th:text="${report.getSpeaker().getSurname()}">right</div>
+                            </td>
+                            <td th:text="${report.getSpeaker().getLogin()}"></td>
+                            <div sec:authorize="hasRole('ROLE_SPEAKER')">
+                                <td>
+                                    <form method="post"
+                                          th:action="@{/speaker/suggestions/{name}(name=${report.getName()})}">
+                                        <input type="submit" class="btn btn-danger" th:value="#{label.button.delete}"/>
+                                    </form>
+                                </td>
+                            </div>
+                            <div sec:authorize="hasRole('ROLE_MODERATOR')">
+                                <td>
+                                    <form method="post"
+                                          th:action="@{/moderator/suggestions/accept/{name}(name=${report.getName()})}">
+                                        <input type="submit" class="btn btn-info" th:value="#{label.suggest.accept}"/>
+                                    </form>
+                                </td>
+                                <td>
+                                    <form method="post"
+                                          th:action="@{/moderator/suggestions/decline/{name}(name=${report.getName()})}">
+                                        <input type="submit" class="btn btn-danger" th:value="#{label.suggest.decline}"/>
+                                    </form>
+                                </td>
+                            </div>
+
+                        </ul>
+                    </tr>
+                </div>
+            </table>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+----------------------------------------------------------------
+Sun Jul 03 17:34:27 EEST 2022:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0181-c47b-f758-0000014cd680 
+on database directory memory:C:\Users\bedu_s_bashkoy\source\conferences\9113da7d-a57a-4d91-9031-2dd9a9d75e3e with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@6f94fa3e 
+Loaded from file:/C:/Users/bedu_s_bashkoy/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
+java.vendor=Eclipse Adoptium
+java.runtime.version=17.0.2+8
+user.dir=C:\Users\bedu_s_bashkoy\source\conferences
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Sun Jul 03 17:34:27 EEST 2022:
+Shutting down instance a816c00e-0181-c47b-f758-0000014cd680 on database directory memory:C:\Users\bedu_s_bashkoy\source\conferences\9113da7d-a57a-4d91-9031-2dd9a9d75e3e with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@6f94fa3e 
+----------------------------------------------------------------
+Sun Jul 03 17:34:27 EEST 2022:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance 0ddd00a9-0181-c47b-f758-0000014cd680 
+on database directory memory:C:\Users\bedu_s_bashkoy\source\conferences\9113da7d-a57a-4d91-9031-2dd9a9d75e3e with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@6f94fa3e 
+Loaded from file:/C:/Users/bedu_s_bashkoy/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
+java.vendor=Eclipse Adoptium
+java.runtime.version=17.0.2+8
+user.dir=C:\Users\bedu_s_bashkoy\source\conferences
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

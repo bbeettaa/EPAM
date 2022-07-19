@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="${language}" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <title th:text="#{title.createEvent}">Create Event</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div th:insert="templates :: navbar"/>
+
+<div class="container-fluid text-center">
+    <div class="content mt-3">
+
+        <div class="col-sm-5 sidenav"></div>
+
+        <div class="col-sm-2 text-left">
+
+            <div class="well" style="margin-top: 100px;">
+                <form method="post" th:action="@{${#httpServletRequest.requestURI}}" th:object="${entity}">
+                    <div class="createUser" style="alignment: center">
+                        <br/>
+                        <h2 th:text="#{title.createEvent}">Create Event</h2>
+
+                        <label style="color: orange;font-size: 20px"> *</label>
+                        <label th:text="#{label.event.name}">nameToSet: </label>:
+                        <input type="text" class="form-control" th:field="*{name}" style="width: 280px;"/>
+                        <div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('name')}"
+                             th:errors="*{name}"  style="width: 280px;">Name Error
+                        </div>
+                        <br>
+
+                        <label style="color: orange;font-size: 20px"> *</label>
+                        <label th:text="#{label.event.date}">date: </label>:
+                        <input type="date" class="form-control" th:field="*{dateBegin}" required style="width: 120px"/>
+                        <!--<div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('dateBegin')}"
+                             th:errors="*{dateBegin}">Name Error
+                        </div>-->
+                        <br>
+
+                        <label style="color: orange;font-size: 20px"> *</label>
+                        <label th:text="#{label.event.time}">time: </label>:
+                        <input type="time" class="form-control text-center" th:field="*{timeBegin}" required  style="width: 120px" step="1"/>
+       <!--                 <div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('timeBegin')}"
+                             th:errors="*{timeBegin}">Name Error
+                        </div>-->
+                        <br>
+
+                    </div>
+                    <input type="submit" th:value="#{title.createEvent}" class="btn btn-default"
+                           style="width: 200px"><br>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

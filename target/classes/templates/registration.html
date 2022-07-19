@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="${language}">
+<head>
+  <style>
+  </style>
+  <title>Create Person</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<nav class="navbar-inverse">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li><a th:href="@{/login}" th:text="#{title.login}"></a></li>
+    </ul>
+    <div th:insert="templates :: navbar-right"/>
+  </div>
+</nav>
+
+<div class="container-fluid text-center">
+  <div class="content mt-3">
+    <div class="col-sm-5 sidenav" style="height: 100%"></div>
+
+    <div class="col-sm-2 text-left">
+
+      <div class="well" style="margin-top: 100px;">
+        <form th:method="POST" th:action="@{/registration}" th:object="${person}">
+          <label style="color: orange;font-size: 20px"> *</label>
+          <label th:text="#{label.user.login}">login: </label>:
+          <input type="text" class="form-control" th:field="*{login}" id="login"/>
+          <div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('login')}" th:errors="*{login}">Name Error</div>
+          <br>
+
+          <label style="color: orange;font-size: 20px"> *</label>
+          <label th:text="#{label.user.password}">password: </label>:
+          <input type="text" class="form-control" th:field="*{password}" id="password"/>
+          <div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('password')}" th:errors="*{password}">Name Error</div>
+          <br>
+
+          <label style="color: orange;font-size: 20px"> *</label>
+          <label th:text="#{label.user.name}">name: </label>:
+          <input type="text" class="form-control" th:field="*{name}" id="name"/>
+          <div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error</div>
+          <br>
+
+          <label style="color: orange;font-size: 20px"> *</label>
+          <label th:text="#{label.user.surname}">surname: </label>:
+          <input type="text" class="form-control" th:field="*{surname}" id="surname"/>
+          <div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('surname')}" th:errors="*{surname}">Name Error</div>
+          <br>
+
+          <label style="color: orange;font-size: 20px"> *</label>
+          <label th:text="#{label.user.email}">email: </label>:
+          <input type="text" class="form-control" th:field="*{email}" id="email"/>
+          <div class="alert alert-danger" role="alert" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Name Error</div>
+          <br>
+
+          <label for="role" th:text="#{label.user.role}"> Role</label>:
+          <select id="role" th:field="*{role}" >
+            <option value="USER" th:text="#{label.role.user}">user</option>
+            <option value="SPEAKER" th:text="#{label.role.speaker}">speaker</option>
+          </select>
+          <br>
+
+          <input type="submit" class="btn btn-default" th:value="#{label.button.create}"/>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
